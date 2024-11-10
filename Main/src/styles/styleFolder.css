@@ -1,0 +1,137 @@
+.readme{
+    width: 80vw;
+    height: 80vh;
+    position: absolute;
+    background: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border: 6px solid #0a25c0;
+}
+
+.readmeTitle{
+    height: 2vw;
+    width: 100%;
+    /* background: blue; */
+	background: linear-gradient(
+		0deg,
+		#0a25c0,
+		#0a25c0,
+		#0a25c0,
+		#0a25c0,
+		#0a25c0,
+		#455fed
+	);
+    display: flex;
+    align-items: center;
+    color: white;
+	font-family: "Tahoma", sans-serif;
+    padding-left: 1vw;
+    font-size: 1vw;
+}
+
+.IconFolderRedme{
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+
+.menuTextReadme{
+    background: #eeeddb;
+    width: 100%;
+    height: 2vw;
+    padding-top: .5vw;
+    padding-left: 1vw;
+    border-bottom: 1px solid rgb(175, 174, 174);
+}
+
+.menuTextReadme ul{
+    display: flex;
+    gap: 1vw;
+	font-family: "Tahoma", sans-serif;
+
+    /* justify-content: space-around; */
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: .9vw;
+}
+
+.menuTextReadme ul li{
+    padding: .2vw;
+
+}
+
+.menuTextReadme ul li:hover{
+    cursor: pointer;
+    background: rgba(158, 157, 157, 0.205);
+}
+
+
+.menuIconReadme{
+    width: 100%;
+    height: 5vw;
+    background: #eeeddb;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 1vw;
+	font-family: "Tahoma", sans-serif;
+    border: 1px solid rgb(175, 174, 174);
+
+}
+
+
+.backIcon{
+    width: 2.5vw;
+    height: 2.5vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    cursor: pointer;
+}
+
+.otherSide{
+    transform: rotate(180deg);
+}
+
+.readmeSearch{
+    width: 100%;
+    height: 2vw;
+    background: #eeeddb;
+    border: 1px solid rgb(175, 174, 174);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 1vw;
+    color: rgb(150, 150, 150);
+}
+
+.inputSearch{
+    height: 100%;
+    width: 100%;
+	font-family: "Tahoma", sans-serif;
+    font-size: .9vw;
+    border: none;
+
+}
+
+.divInput{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background: white;
+    margin-left: 1vw;
+}
+
+.backIconInput{
+    width: 1.5vw;
+    height: 1.5vw;
+    margin-left: 1vw;
+    cursor: pointer;
+    transform: rotate(180deg);
+    margin-right: .6vw;
+}

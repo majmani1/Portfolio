@@ -9,6 +9,8 @@ import c from "../assets/images/Programming_Languages/letter-c.png";
 import sql from "../assets/images/Programming_Languages/sql-server.png";
 import illustrator from "../assets/images/Programming_Languages/illustrator.png";
 import docker from "../assets/images/Programming_Languages/docker.png";
+import Meta from "../assets/images/Programming_Languages/meta.png";
+import Ofppt from "../assets/images/Programming_Languages/ofppt.png";
 
 import SocialMedia from "./socialMedia";
 import Skills from "./skills";
@@ -31,7 +33,15 @@ export default function LeftSide() {
 				<Skills picture={illustrator} title="illustrator" />
 				<Skills picture={docker} title="Docker" />
 			</div>
-			<div className="right_side"></div>
+			<div className="right_side">
+				<Skills
+					picture={Ofppt}
+					title="Qualifying training in Python language"
+				/>
+				<Skills picture={Meta} title="Programming in Python" />
+				<Skills picture={Meta} title="Introduction to Front-End Development" />
+				<Skills picture={Meta} title="Programming with JavaScript" />
+			</div>
 			<div className="footerLeftSide">
 				<SocialMedia
 					lien="https://www.linkedin.com/in/mouad-ajmani-21071021b/"

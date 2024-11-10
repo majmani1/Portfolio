@@ -2,9 +2,9 @@ import "../styles/logPage.css";
 import { useState } from "react";
 import Home from "../pages/home";
 
-export default function Infosuser() {
+export default function Infosuser(props) {
 	const [inputText, setInputText] = useState("");
-	const [showHome, setShowHome] = useState(false);
+	// const [showHome, setShowHome] = useState(false);
 
 	function setValue(event) {
 		setInputText(event.target.value);
@@ -13,8 +13,9 @@ export default function Infosuser() {
 	function checkPassword() {
 		if (inputText === "1337") {
 			console.log("Welcome to your profile");
-			setShowHome(true);
-			return "lllll";
+			// setShowPages(true);
+			props.setShowPages("Home");
+			// return "lllll";
 
 			// alert("Welcome to your profile");
 		} else {

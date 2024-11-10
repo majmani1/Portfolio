@@ -6,6 +6,8 @@ import useWeather from "../hooks/useWeather";
 import LeftSide from "./leftSide";
 import meteo from "../assets/images/meteo.png";
 import { useEffect, useState } from "react";
+import Linkdind from "../assets/images/social_media_icons/linkedin.png";
+import Github from "../assets/images/social_media_icons/github.png";
 
 export default function FooterHome() {
 	const { weather, error } = useWeather();
@@ -21,7 +23,17 @@ export default function FooterHome() {
 				<span> Start</span>
 			</div>
 			<div className="dateMeteo">
-				<img src={Msn} alt="Msn" className="msnIcon" />
+				<a
+					href="https://www.linkedin.com/in/mouad-ajmani-21071021b/"
+					target="_blank"
+				>
+					{" "}
+					<img src={Linkdind} alt="Msn" className="msnIcon" />
+				</a>
+				<a href="https://github.com/majmani1" target="_blank">
+					{" "}
+					<img src={Github} alt="Msn" className="msnIcon" />
+				</a>
 				<div className="meteo">
 					<img
 						className="meteoIcon"

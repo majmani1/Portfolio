@@ -6,20 +6,10 @@ import LogPage from "./pages/LogPage";
 import React, { useState, useEffect } from "react";
 
 function App() {
-	const [showHome, setShowHome] = useState(false);
-	useEffect(() => {
-		const timer = setTimeout(() => setShowHome(true), 5000);
-
-		// Clear the timer if the component is unmounted
-		return () => clearTimeout(timer);
-	}, []);
-
 	return (
 		<div className="App">
-			{showHome ? <LogPage /> : <Loading_windowsXp />}
-
 			{/* <Loading_windowsXp /> */}
-			{/* <Home /> */}
+			<Home />
 			{/* <LogPage /> */}
 		</div>
 	);
