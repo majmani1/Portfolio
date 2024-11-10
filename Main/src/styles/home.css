@@ -38,13 +38,13 @@
 }
 
 @keyframes windows {
-	0%{
+	0% {
 		opacity: 0.7;
 	}
-	50%{
+	50% {
 		opacity: 1;
 	}
-	100%{
+	100% {
 		opacity: 0.7;
 	}
 }
@@ -72,8 +72,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	animation: windows 3s  ease-in-out infinite;
-
+	animation: windows 3s ease-in-out infinite;
 }
 
 .dateMeteo {
@@ -133,7 +132,7 @@
 	width: 40vw;
 	display: grid;
 	grid-template-columns: 1.5fr 1fr;
-	grid-template-rows: 1fr 5fr .8fr;
+	grid-template-rows: 1fr 5fr 0.8fr;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .fullLeftSIde .header {
@@ -168,6 +167,7 @@
 	grid-column-start: 2;
 	grid-row-start: 2;
 	background: #d3e5fa;
+	overflow-x: hidden;
 }
 
 .pictureMouad {
@@ -187,8 +187,7 @@
 	font-weight: bold;
 }
 
-
-.logo{
+.logo {
 	width: 2vw;
 	height: 2vw;
 	background: url("../assets/images/social_media_icons/linkedin.png");
@@ -197,8 +196,7 @@
 	margin-right: 0.5vw;
 }
 
-
-.socialMedia a{
+.socialMedia a {
 	text-decoration: none;
 	color: white;
 	display: flex;
@@ -209,7 +207,7 @@
 	font-weight: bold;
 	padding-left: 0.5vw;
 }
-.socialMedia{
+.socialMedia {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -218,27 +216,78 @@
 	/* background: red; */
 }
 
-.skills{
+.skills {
 	display: flex;
 	/* justify-content: space-between; */
 	align-items: center;
 	width: 100%;
-	/* height: 100%; */
+	height: 10%;
 	/* background: red; */
 	margin-top: 8%;
 	margin-left: 4%;
 }
 
-.pictureSkill{
+
+.skills:hover{
+	background: #3b87e7;
+	cursor: pointer;
+}
+.pictureSkill {
 	width: 2vw;
 	height: 2vw;
 	background-size: cover;
 	background-position: center;
+	filter: drop-shadow(2px 2px 2px #222);
 	/* margin-left: 1vw; */
 }
 
-.nameSkill{
-	font-size: 1vw;
-	font-weight: bold;
+.nameSkill {
+	font-size: .9vw;
+	/* font-weight: bold; */
 	margin-left: 5%;
+	font-family: "Tahoma", sans-serif;
+	text-align: start;
+}
+
+.IconFolder {
+	width: 3vw;
+	height: 3vw;
+	/* margin-top: 4vw; */
+}
+
+.folderIcon {
+	width: 8vw;
+	height: 8vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: .8vw;
+	/* font-weight: bold; */
+	color: white;
+	margin-left: 1vw;
+	font-family: "Tahoma", sans-serif;
+	padding-left: 1vw;
+	/* margin-top: 1vw; */
+}
+
+.folderIcon .NameFolder{
+	/* width: 100%; */
+	/* height: 100%; */
+	/* text-align: center; */
+	
+}
+
+.folderIcon:hover > .NameFolder {
+	cursor: pointer;
+	opacity: 0.9;
+	background: linear-gradient(0deg, #3b87e7, #1062cd, #1062cd, #3b87e7);
+}
+
+.folderIcon:hover > img {
+	filter: invert(10%);
+}
+
+.folderIcon:hover {
+	cursor: pointer;
 }

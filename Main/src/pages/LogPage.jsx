@@ -5,12 +5,20 @@ import pictureMouad from "../assets/images/picture_Mouad.jpg";
 import Infosuser from "../components/infosUser";
 import { useState } from "react";
 import Home from "./home";
+import Loading from "./loading";
 
 export default function LogPage() {
 	const [showInfosUser, setShowInfosUser] = useState(false);
-	// const {showHome, setShowHome} = useState(false);
+	const [showPages, setShowPages] = useState("");
 	function ShowInfosUser() {
 		setShowInfosUser(true);
+	}
+	if (showPages === "Home") {
+		return <Home />;
+	}
+	if (showPages === "loading") {
+		// props.setShowHome(false);
+		return <Loading />;
 	}
 
 	return (
@@ -26,13 +34,16 @@ export default function LogPage() {
 						<div className="pictureUser_logPage"></div>
 						<div className="infosUser_logPage">
 							<span className="nameUser_logPage">Mouad Ajmani</span>
-							{showInfosUser && <Infosuser />}
+							{showInfosUser && <Infosuser setShowPages={setShowPages} />}
 						</div>
 					</div>
 				</div>
 			</div>
 			<div className="footerLogPage">
-				<button className="buttonRestart">
+				<button
+					onClick={() => setShowPages("loading")}
+					className="buttonRestart"
+				>
 					<img className="pictureRestart" src={Restart} />
 					Restart computer
 				</button>
