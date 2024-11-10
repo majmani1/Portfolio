@@ -1,0 +1,74 @@
+.fullLoading {
+	height: 100vh;
+	width: 100vw;
+	background: black;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+    margin-bottom: 3%;
+    position: absolute;
+    bottom: 4%;
+	/* padding-left: 5%;
+    padding-right: 5%; */
+}
+
+.logo_windowsXp{
+    margin-top: 5vw;
+    width: 54vh;
+    height: 33vh;
+}
+.footer p,
+.footer strong {
+    
+	color: white;
+	font-size: 1.8vh;
+	margin: 0 1rem;
+	margin-left: 8%;
+	margin-right: 8%;
+
+	font-style: italic;
+
+}
+
+.loadingBar {
+	height: 98%;
+	width: 5%;
+	background: linear-gradient(0deg, #0a25c0, #455fed, #0a25c0);
+	margin-left: 1%;
+	animation: animatioLoading 4s ease-in-out infinite;
+}
+.loadingDiv {
+	width: 30vh;
+	height: 3vh;
+	border: 2px solid white;
+	border-radius: 10px;
+	display: flex;
+	overflow: hidden;
+    margin-top: 14%;
+}
+
+.logo_with_loading{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes animatioLoading {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(2000%);
+	}
+}

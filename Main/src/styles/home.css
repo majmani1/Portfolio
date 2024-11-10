@@ -1,0 +1,244 @@
+.fullHome {
+	height: 100vh;
+	width: 100vw;
+	background: url("../assets/images/background_windowsXp.jpg");
+	background-position: center;
+	background-size: cover;
+}
+
+.parent > div {
+	/* background: red; */
+}
+
+.parent {
+	display: grid;
+	grid-template-columns: repeat(7, auto);
+	grid-template-rows: auto;
+	gap: 8px;
+	height: 90%;
+	width: 100%;
+}
+
+.footerHome {
+	position: absolute;
+	bottom: 0;
+	height: 4vw;
+	width: 100%;
+	background: linear-gradient(
+		0deg,
+		#0a25c0,
+		#0a25c0,
+		#0a25c0,
+		#0a25c0,
+		#0a25c0,
+		#455fed
+	);
+	display: flex;
+	justify-content: space-between;
+}
+
+@keyframes windows {
+	0%{
+		opacity: 0.7;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0.7;
+	}
+}
+
+.iconWindows:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.iconWindows {
+	width: 13%;
+	height: 100%;
+	border-top-right-radius: 40px;
+	border-bottom-right-radius: 40px;
+	background: linear-gradient(
+		0deg,
+		rgb(8, 155, 8),
+		rgb(8, 155, 8),
+		rgb(8, 155, 8),
+		rgb(8, 155, 8),
+		rgb(8, 155, 8),
+		rgb(90, 233, 90)
+	);
+	/* background: green; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: windows 3s  ease-in-out infinite;
+
+}
+
+.dateMeteo {
+	width: 13%;
+	height: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background: linear-gradient(0deg, #2c9ee6, #037dce, #037dce, #2c9ee6);
+}
+
+.iconWindows .icon {
+	width: 3vw;
+	height: 3vw;
+	background: url("../assets/images/icon_windowsXp.png");
+	background-size: cover;
+	background-position: center;
+}
+
+.iconWindows span {
+	font-size: 2vw;
+	color: white;
+	font-weight: bold;
+	margin-top: -0.5vw;
+}
+
+.msnIcon {
+	width: 1.5vw;
+	height: 1.5vw;
+}
+
+.time {
+	font-size: 0.7vw;
+	color: white;
+}
+
+.meteoIcon {
+	width: 1.5vw;
+	height: 1.5vw;
+}
+.dateMeteo .meteo {
+	font-size: 0.5vw;
+	color: white;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: -0.5vw;
+	/* background: red; */
+	width: 30%;
+	height: 70%;
+}
+
+.fullLeftSIde {
+	position: absolute;
+	bottom: 4vw;
+	height: 40vw;
+	width: 40vw;
+	display: grid;
+	grid-template-columns: 1.5fr 1fr;
+	grid-template-rows: 1fr 5fr .8fr;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.fullLeftSIde .header {
+	grid-column: span 2 / span 2;
+	/* background: green; */
+	background: linear-gradient(0deg, #3b87e7, #1062cd, #1062cd, #1062cd);
+	grid-row-start: 1;
+	display: flex;
+	align-items: center;
+	padding-left: 1vw;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.fullLeftSIde .footerLeftSide {
+	grid-column: span 2 / span 2;
+	background: linear-gradient(0deg, #3b87e7, #1062cd, #1062cd, #3b87e7);
+	grid-row-start: 3;
+	display: flex;
+	justify-content: end;
+}
+
+.left_side {
+	grid-column-start: 1;
+	grid-row-start: 2;
+	background: white;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.right_side {
+	grid-column-start: 2;
+	grid-row-start: 2;
+	background: #d3e5fa;
+}
+
+.pictureMouad {
+	width: 4vw;
+	height: 4vw;
+	background: url("../assets/images/picture_Mouad.jpg");
+	background-size: cover;
+	background-position: start;
+	border-radius: 10%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.nameMouad {
+	font-size: 1.5vw;
+	color: white;
+	margin-left: 1vw;
+	font-weight: bold;
+}
+
+
+.logo{
+	width: 2vw;
+	height: 2vw;
+	background: url("../assets/images/social_media_icons/linkedin.png");
+	background-size: cover;
+	background-position: center;
+	margin-right: 0.5vw;
+}
+
+
+.socialMedia a{
+	text-decoration: none;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: auto;
+	font-size: 1vw;
+	font-weight: bold;
+	padding-left: 0.5vw;
+}
+.socialMedia{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 29%;
+	height: 100%;
+	/* background: red; */
+}
+
+.skills{
+	display: flex;
+	/* justify-content: space-between; */
+	align-items: center;
+	width: 100%;
+	/* height: 100%; */
+	/* background: red; */
+	margin-top: 8%;
+	margin-left: 4%;
+}
+
+.pictureSkill{
+	width: 2vw;
+	height: 2vw;
+	background-size: cover;
+	background-position: center;
+	/* margin-left: 1vw; */
+}
+
+.nameSkill{
+	font-size: 1vw;
+	font-weight: bold;
+	margin-left: 5%;
+}
