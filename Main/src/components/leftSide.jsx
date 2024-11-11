@@ -11,6 +11,8 @@ import illustrator from "../assets/images/Programming_Languages/illustrator.png"
 import docker from "../assets/images/Programming_Languages/docker.png";
 import Meta from "../assets/images/Programming_Languages/meta.png";
 import Ofppt from "../assets/images/Programming_Languages/ofppt.png";
+import Log from "../assets/images/iconsWindowsXP/log.ico";
+import TurnOff from "../assets/images/iconsWindowsXP/turnOff.ico";
 
 import SocialMedia from "./socialMedia";
 import Skills from "./skills";
@@ -43,16 +45,20 @@ export default function LeftSide() {
 				<Skills picture={Meta} title="Programming with JavaScript" />
 			</div>
 			<div className="footerLeftSide">
-				<SocialMedia
-					lien="https://www.linkedin.com/in/mouad-ajmani-21071021b/"
-					name="Mouad Ajmani"
-					nameIcon="linkedin"
-				/>
-				<SocialMedia
-					lien="https://github.com/majmani1"
-					name="majmani1"
-					nameIcon="github"
-				/>
+				<div className="turnLog">
+					<div
+						className="logoLogs"
+						style={{ backgroundImage: `url(${Log})` }}
+					></div>
+					Log Off
+				</div>
+				<div className="turnLog">
+					<div
+						className="logoLogs"
+						style={{ backgroundImage: `url(${TurnOff})` }}
+					></div>
+					Log Off
+				</div>
 			</div>
 		</div>
 	);

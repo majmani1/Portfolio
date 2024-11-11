@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import Linkdind from "../assets/images/social_media_icons/linkedin.png";
 import Github from "../assets/images/social_media_icons/github.png";
 
-export default function FooterHome() {
+export default function FooterHome(props) {
 	const { weather, error } = useWeather();
 	const [showLeftSide, setShowLeftSide] = useState(false);
 	function show_or_hide_lefSide() {
