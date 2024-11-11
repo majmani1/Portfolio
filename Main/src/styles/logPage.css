@@ -53,10 +53,11 @@
 }
 
 .footerText {
+	text-align: center;
+	margin-right: 1vw;
 	color: white;
 	font-size: 1vw;
-	margin-left: 1vw;
-	width: 30vw;
+	width: 20vw;
 	display: flex;
 	flex-wrap: wrap;
 }

@@ -3,11 +3,15 @@ import "../styles/home.css";
 import FooterHome from "../components/footerHome";
 import IconFolder from "../assets/images/iconsWindowsXP/folder.png";
 import Pdf from "../assets/images/iconsWindowsXP/pdf.png";
+
 import { useState } from "react";
 import Readme from "../components/readme";
+import FolderPdf from "../components/folderPdf";
 
 export default function Home() {
 	const [showReadme, setShowReadme] = useState(false);
+	const [showAbout, setSHowAbout] = useState(false);
+
 	return (
 		<div className="fullHome">
 			<div className="folderIcon">
@@ -27,9 +31,10 @@ export default function Home() {
 				<img src={Pdf} className="IconFolder"></img>
 				<div className="NameFolder">Cv_Mouad_Ajmani(an)</div>
 			</div>
-			{/* {showReadme && <Readme />} */}
-			<Readme />
-			<FooterHome />
+			{/* <Readme /> */}
+			{showReadme && <Readme setShowReadme={setShowReadme} setSHowAbout={setSHowAbout}/>}
+			{showAbout && <FolderPdf setSHowAbout={setSHowAbout} />}
+			<FooterHome  />
 		</div>
 	);
 }

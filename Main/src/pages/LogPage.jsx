@@ -14,12 +14,15 @@ export default function LogPage() {
 		setShowInfosUser(true);
 	}
 	if (showPages === "Home") {
-		return <Home />;
+		return <Home setShowPages={setShowPages} />;
 	}
 	if (showPages === "loading") {
 		// props.setShowHome(false);
 		return <Loading />;
 	}
+	// if (showPages === "LogPage") {
+	// 	return <LogPage />;
+	// }
 
 	return (
 		<div className="fullLogPage">
@@ -48,8 +51,8 @@ export default function LogPage() {
 					Restart computer
 				</button>
 				<div className="footerText">
-					man ba3d ma ghadi tloga ghadi t9der tchof lhome page dyal lportfolio
-					dyali li howa 3ibara 3la windows xp
+					This is my portfolio website, I made it with ReactJs, I hope you like
+					it
 				</div>
 			</div>
 		</div>
