@@ -22,6 +22,10 @@ export default function FooterHome(props) {
 				<div className="icon"></div>
 				<span> Start</span>
 			</div>
+			{/* <div className="widowsOpen">
+				<div className="windwOpenIcon"></div>
+				<div className="windwOpenIcon"></div>
+			</div> */}
 			<div className="dateMeteo">
 				<a
 					href="https://www.linkedin.com/in/mouad-ajmani-21071021b/"

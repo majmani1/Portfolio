@@ -12,6 +12,24 @@ import Big from "../assets/images/iconsWindowsXP/big.png";
 import { useState } from "react";
 
 export default function Readme(props) {
+	const [bigWindowRedme, setBigWindowRedme] = useState(true);
+	function big_or_small() {
+		if (bigWindowRedme) {
+			setBigWindowRedme(false);
+			document.querySelector(".readme").style.width = "100vw";
+			document.querySelector(".readme").style.height = "100vh";
+			document.querySelector(".readme").style.marginTop = "0px";
+			document.querySelector(".readme").style.marginLeft = "0px";
+			document.querySelector(".readme").style.border = "0px";
+			// document.querySelector(".readme").style.zIndex = "1";
+		} else {
+			setBigWindowRedme(true);
+			document.querySelector(".readme").style.width = "80vw";
+			document.querySelector(".readme").style.height = "80vh";
+			document.querySelector(".readme").style.border = "6px solid #0a25c0";
+			// document.querySelector(".readme").style.zIndex = "";
+		}
+	}
 	return (
 		<div className="readme">
 			<div className="readmeTitle">
@@ -21,7 +39,7 @@ export default function Readme(props) {
 				</div>
 				<div className="closeIcons">
 					<img src={Hide} className="closeIcon disable"></img>
-					<img src={Big} className="closeIcon disable"></img>
+					<img src={Big} className="closeIcon " onClick={big_or_small}></img>
 					<img
 						src={Close}
 						onClick={() => props.setShowReadme(false)}
@@ -88,7 +106,7 @@ export default function Readme(props) {
 						<img src={Pdf} className="IconFolder"></img>
 						<div className="NameFolder NameFolderReadme">About me</div>
 					</div>
-					<div className="folderIcon">
+					<div className="folderIcon" onClick={() => props.setWorksPdf(true)}>
 						<img src={Pdf} className="IconFolder"></img>
 						<div className="NameFolder NameFolderReadme">My Works</div>
 					</div>

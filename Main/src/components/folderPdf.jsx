@@ -3,10 +3,32 @@ import Close from "../assets/images/iconsWindowsXP/close.png";
 import Hide from "../assets/images/iconsWindowsXP/hide.png";
 import Big from "../assets/images/iconsWindowsXP/big.png";
 import Pdf from "../assets/images/iconsWindowsXP/pdf.png";
+import { useState } from "react";
 
 export default function FolderPdf(props) {
+	const [bigWindow, setBigWindow] = useState(true);
+	function big_or_small() {
+		if (bigWindow) {
+			setBigWindow(false);
+			document.querySelector(".Pdf").style.width = "100vw";
+			document.querySelector(".Pdf").style.height = "100vh";
+			document.querySelector(".Pdf").style.border = "0px";
+			document.querySelector(".Pdf").style.zIndex = "1";
+			document.querySelector(".about").style.top = "0";
+			document.querySelector(".about").style.left = "0%";
+		} else {
+			setBigWindow(true);
+			document.querySelector(".Pdf").style.width = "50vw";
+			document.querySelector(".Pdf").style.height = "80vh";
+			document.querySelector(".about").style.top = "0";
+			document.querySelector(".Pdf").style.border = " 6px solid #0a25c0";
+			document.querySelector(".Pdf").style.zIndex = "1";
+			document.querySelector(".Pdf").style.border = " 6px solid #0a25c0";
+			document.querySelector(".about").style.left = "2%";
+		}
+	}
 	return (
-		<div className="Pdf">
+		<div className="Pdf about">
 			<div className="readmeTitle">
 				<div className="NameIcon">
 					<img src={Pdf} className="IconFolderRedme"></img>
@@ -14,7 +36,7 @@ export default function FolderPdf(props) {
 				</div>
 				<div className="closeIcons">
 					<img src={Hide} className="closeIcon disable"></img>
-					<img src={Big} className="closeIcon disable"></img>
+					<img src={Big} onClick={big_or_small} className="closeIcon "></img>
 					<img
 						src={Close}
 						onClick={() => props.setSHowAbout(false)}
