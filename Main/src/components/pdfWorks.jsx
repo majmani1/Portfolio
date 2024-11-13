@@ -3,7 +3,11 @@ import Close from "../assets/images/iconsWindowsXP/close.png";
 import Hide from "../assets/images/iconsWindowsXP/hide.png";
 import Big from "../assets/images/iconsWindowsXP/big.png";
 import Pdf from "../assets/images/iconsWindowsXP/pdf.png";
+import Docker from "../assets/images/Programming_Languages/docker.png";
+import Webserv from "../assets/images/Programming_Languages/webserv.jpg";
+
 import { useState } from "react";
+import Draggable from "react-draggable";
 
 export default function WorksPdf(props) {
 	const [bigWindow, setBigWindow] = useState(true);
@@ -11,12 +15,12 @@ export default function WorksPdf(props) {
 		if (bigWindow) {
 			setBigWindow(false);
 			document.querySelector(".Pdf").style.width = "100vw";
-			document.querySelector(".Pdf").style.height = "100vh";
+			document.querySelector(".Pdf").style.height = "96vh";
 
-			document.querySelector(".Pdf").style.border = "0px";
+			// document.querySelector(".Pdf").style.border = "0px";
 			document.querySelector(".Pdf").style.zIndex = "1";
-			document.querySelector(".works").style.top = "0";
-			document.querySelector(".works").style.right = "0%";
+			// document.querySelector(".works").style.top = "0";
+			// document.querySelector(".works").style.right = "0%";
 		} else {
 			setBigWindow(true);
 			document.querySelector(".Pdf").style.width = "50vw";
@@ -29,57 +33,105 @@ export default function WorksPdf(props) {
 		}
 	}
 	return (
-		<div className="Pdf works">
-			<div className="readmeTitle">
-				<div className="NameIcon">
-					<img src={Pdf} className="IconFolderRedme"></img>
-					About
+		<Draggable>
+			<div className="Pdf works">
+				<div className="readmeTitle">
+					<div className="NameIcon">
+						<img src={Pdf} className="IconFolderRedme"></img>
+						Works
+					</div>
+					<div className="closeIcons">
+						<img src={Hide} className="closeIcon disable"></img>
+						<img src={Big} onClick={big_or_small} onTouchEnd={big_or_small} className="closeIcon "></img>
+						<img
+							src={Close}
+							onClick={() => props.setWorksPdf(false)}
+							onTouchEnd={() => props.setWorksPdf(false)}
+							className="closeIcon"
+						></img>
+					</div>
 				</div>
-				<div className="closeIcons">
-					<img src={Hide} className="closeIcon disable"></img>
-					<img src={Big} onClick={big_or_small} className="closeIcon "></img>
-					<img
-						src={Close}
-						onClick={() => props.setWorksPdf(false)}
-						className="closeIcon"
-					></img>
+				<div className="menuTextReadme">
+					<ul>
+						<li>File</li>
+						<li>Edit</li>
+						<li>View</li>
+						<li>Favorites</li>
+						<li>Tools</li>
+						<li>Help</li>
+					</ul>
 				</div>
-			</div>
-			<div className="menuTextReadme">
-				<ul>
-					<li>File</li>
-					<li>Edit</li>
-					<li>View</li>
-					<li>Favorites</li>
-					<li>Tools</li>
-					<li>Help</li>
-				</ul>
-			</div>
 
-			<div className="SpaceText">
-				<h1>Hi, I'm Mouad Ajmani</h1>
-				<p>
-					I am a Full Stack Developer, and I have a passion for coding. I love
-					to work on new projects, and I am always looking for new challenges.
-				</p>
-				<p>
-					In my educational career, I have been able to learn a lot of things
-					about working with different technologies, working in a team, managing
-					my time effectively, solving problems, and learning new things in a
-					short period of time.
-				</p>
-				<p>
-					My strengths include a strong work ethic, a willingness to learn and a
-					willingness to be open to new challenges. I am a fast learner and
-					always eager for new challenges.
-				</p>
-				<p>
-					As of right now, I am seeking my first job experience as an intern in
-					order to gain more knowledge as well as to gain experience
-				</p>
-			</div>
+				<div className="SpaceText">
+					<div className="MyWorks">
+						<img src={Webserv} className="MyWorksImg"></img>
+						<div className="DescriptionProject">
+							<p>
+								• Developed an online ping-pong web application with a front-end
+								built using vanilla JavaScript, Django for the back-end, and
+								PostgreSQL for the database.
+							</p>{" "}
+							<p>
+								• Contributed by designing and implementing the game mechanics
+								on both the front-end and back-end. Utilized WebSockets to
+								enable real-time interactions, enhancing the user experience.
+							</p>
+							<a
+								href="https://github.com/majmani1/webserv"
+								className="LinkProject"
+							>
+								FT_TRANSCENDENCE
+							</a>
+						</div>
+					</div>
+					<div className="MyWorks">
+						<img src={Webserv} className="MyWorksImg"></img>
+						<div className="DescriptionProject">
+							<p>
+								• Contributed to the development of a custom web server,
+								focusing on HTTP methods (GET, POST, DELETE) implementation.{" "}
+							</p>
+							<p>
+								• Applied expertise in sockets programming and multiplexing to
+								enhance the server's efficiency, enabling concurrent handling of
+								multiple client requests.
+							</p>
+							<a
+								href="https://github.com/majmani1/webserv"
+								className="LinkProject"
+							>
+								HTTP Web Server
+							</a>
+						</div>
+					</div>
+					<div className="MyWorks">
+						<img src={Docker} className="MyWorksImg"></img>
+						<div className="DescriptionProject">
+							<p>
+								• Inception focuses on expanding my Docker expertise by
+								configuring diverse services in separate containers.
+							</p>
+							<p>
+								• Using tools like Docker, docker-compose, and incorporating
+								MariaDB, Nginx, and WordPress.
+							</p>
+							<p>
+								• the project aims to enhance my knowledge in containerization
+								and orchestration, fostering a comprehensive understanding of
+								deploying services within a Docker environment.
+							</p>
+							<a
+								href="https://github.com/majmani1/inception"
+								className="LinkProject"
+							>
+								INCEPTION
+							</a>
+						</div>
+					</div>
+				</div>
 
-			{/* <div className="readmeContent"></div> */}
-		</div>
+				{/* <div className="readmeContent"></div> */}
+			</div>
+		</Draggable>
 	);
 }

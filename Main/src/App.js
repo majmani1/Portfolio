@@ -7,7 +7,7 @@ import React, { useState, useEffect } from "react";
 
 function App() {
 	return (
-		<div className="App">
+		<div className="App" style={{ overflow: "hidden" }}>
 			{/* <Loading_windowsXp /> */}
 			<Home />
 			{/* <LogPage /> */}
