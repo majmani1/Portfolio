@@ -11,6 +11,7 @@ import illustrator from "../assets/images/Programming_Languages/illustrator.png"
 import docker from "../assets/images/Programming_Languages/docker.png";
 import Meta from "../assets/images/Programming_Languages/meta.png";
 import Ofppt from "../assets/images/Programming_Languages/ofppt.png";
+import ReactLogo from "../assets/images/Programming_Languages/react.png";
 import Log from "../assets/images/iconsWindowsXP/log.ico";
 import TurnOff from "../assets/images/iconsWindowsXP/turnOff.ico";
 
@@ -27,6 +28,7 @@ export default function LeftSide() {
 				<Skills picture={css} title="Cascading Style Sheets" />
 				<Skills picture={html} title="Hypertext Markup Language" />
 				<Skills picture={javascript} title="Javascript" />
+				<Skills picture={ReactLogo} title="React" />
 				<Skills picture={figma} title="Figma" />
 				<Skills picture={python} title="Python" />
 				<Skills picture={cpp} title="Cpp" />
