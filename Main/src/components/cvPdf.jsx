@@ -4,11 +4,14 @@ import Close from "../assets/images/iconsWindowsXP/close.png";
 import Hide from "../assets/images/iconsWindowsXP/hide.png";
 import Big from "../assets/images/iconsWindowsXP/big.png";
 import Pdf from "../assets/images/iconsWindowsXP/pdf.png";
-import { useState } from "react";
+import CvPdf from "../assets/files/Ajmani_Mouad(fr).pdf";
+import { useRef, useState } from "react";
 import Draggable from "react-draggable";
 
-export default function FolderPdf(props) {
+export default function Cvpdf(props) {
 	const [bigWindow, setBigWindow] = useState(true);
+	const dragRef = useRef();
+
 	function big_or_small() {
 		if (bigWindow) {
 			setBigWindow(false);
@@ -32,12 +35,12 @@ export default function FolderPdf(props) {
 		}
 	}
 	return (
-		<Draggable>
-			<div className="Pdf about">
+		<Draggable nodeRef={dragRef}>
+			<div className="Pdf about" ref={dragRef}>
 				<div className="readmeTitle">
 					<div className="NameIcon">
 						<img src={Pdf} className="IconFolderRedme"></img>
-						Cv_Mouad_Ajmani
+						Cv_Mouad_Ajmani (fr)
 					</div>
 					<div className="closeIcons">
 						<img src={Hide} className="closeIcon disable"></img>
@@ -66,11 +69,19 @@ export default function FolderPdf(props) {
 					</ul>
 				</div>
 
+				<a
+					className="buttonDownload"
+					href={CvPdf}
+					download="Ajmani_Mouad_CV(fr).pdf"
+				>
+					{" "}
+					Télécharger
+				</a>
 				<div className="  cvs">
 					<div className="infosPerso">
 						<span className="Name">Mouad Ajmani</span>
 						<p>
-							<i>Software Engineer</i>
+							<i>Ingénieur logiciel</i>
 						</p>
 						<div className="Contacts">
 							<span>mouadajmani@gmail.com</span>
@@ -81,33 +92,33 @@ export default function FolderPdf(props) {
 						</div>
 					</div>
 					<div className="titleCv">
-						<i>PROJECTS</i>
+						<i>Projets</i>
 					</div>
 					<div className="discription">
 						<strong>FT_TRANSCENDENCE</strong>
 						<p>
 							• Développement d'une application web de ping-pong en ligne avec
 							un front-end en JavaScript pur, un back- end en Django, et une
-                            base de données PostgreSQL.{" "}
+							base de données PostgreSQL.{" "}
 						</p>
-                            
-							<p>
-								• Contribution au design et à l'implémentation des mécaniques de
-								jeu sur le front-end et le back-end. Utilisation de WebSockets
-								pour activer les interactions en temps réel, améliorant ainsi
-								l'expérience utilisateur.
-							</p>
+
+						<p>
+							• Contribution au design et à l'implémentation des mécaniques de
+							jeu sur le front-end et le back-end. Utilisation de WebSockets
+							pour activer les interactions en temps réel, améliorant ainsi
+							l'expérience utilisateur.
+						</p>
 						<strong>Serveur Web HTTP</strong>
 						<p>
 							• Contributed to the development of a custom web server, focusing
-                            on HTTP methods (GET, POST, DELETE) implementation.
+							on HTTP methods (GET, POST, DELETE) implementation.
 						</p>
-                            
-							<p>
-								• Expertise en programmation avec sockets et multiplexage pour
-								améliorer l'efficacité du serveur et gérer les requêtes clients
-								simultanément.
-							</p>
+
+						<p>
+							• Expertise en programmation avec sockets et multiplexage pour
+							améliorer l'efficacité du serveur et gérer les requêtes clients
+							simultanément.
+						</p>
 						<strong>INCEPTION</strong>
 						<p>
 							• Projet axé sur l'approfondissement de mes compétences en Docker
@@ -124,6 +135,52 @@ export default function FolderPdf(props) {
 							deploying services within a Docker environment.
 						</p>
 					</div>
+					<div className="titleCv">
+						<i>FORMATION</i>
+					</div>
+					<div className="Education">
+						<strong>Software Developer</strong>
+						<i>École de Codage 1337, Université Polytechnique Mohammed VI</i>
+						<p>
+							• <strong>Cours pertinents :</strong> Développement Web,
+							Algorithmes, Unix, Administration Réseau et Système, Programmation
+							Orientée Objet, Graphisme, Systèmes d'Exploitation, Structures de
+							Données.
+						</p>
+
+						<strong>Licence Professionnelle Communication Digitale</strong>
+						<i>FACULTY OF LETTERS AND HUMAN SCIENCESr</i>
+						<p>
+							• <strong>Cours pertinents :</strong> Développement Web, Design,
+							Communication.
+						</p>
+
+						<strong>Technicien Spécialisé en Développement Multimédia</strong>
+						<i>Ista Ntic, OFPPT</i>
+						<p>
+							• <strong>Cours pertinents :</strong> Algorithmes, Développement
+							Web, Graphisme, Design, UX/UI, Structures de Données.
+						</p>
+					</div>
+					<div className="titleCv">
+						<i>COMPÉTENCES</i>
+					</div>
+
+					<div className="Education">
+						<p>
+							• <strong>Compétences Techniques :</strong> HTML,
+							CSS,JavaScript,React, Django, C, C++, SQL, UX/UI,Figma, Docker,
+							Adobe Photoshop, Adobe Illustrator
+						</p>
+					</div>
+					<div className="titleCv">
+						<i>CERTIFICATS</i>
+					</div>
+					<ul>
+						<li>FORMATION QUALIFIANTE EN LANGUAGE PYTHON. (ISTA)</li>
+						<li>Programming with JavaScript (Meta)</li>
+						<li>Programming in PYTHON(Meta)</li>
+					</ul>
 				</div>
 
 				{/* <div className="readmeContent"></div> */}

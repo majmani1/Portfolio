@@ -181,3 +181,15 @@
 	cursor: pointer;
 	opacity: 0.8;
 }
+
+/* 
+@media screen and (max-width: 1000px) {
+	.pictureUser_logPage{
+		height: 10vw;
+		width: 10vw;
+	}
+	.infosUser_logPage{
+		width: 30vw;
+	}
+	
+} */

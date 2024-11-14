@@ -38,6 +38,11 @@
 	right: 5%;
 }
 
+.education{
+	top: 5%;
+	right: 28%;
+}
+
 .SpaceText {
 	height: 100%;
 	width: 60%;
@@ -97,7 +102,7 @@
 }
 
 .NameIcon {
-	width: 1.5vw;
+	width: auto;
 	height: 1.5vw;
 	display: flex;
 	align-items: center;

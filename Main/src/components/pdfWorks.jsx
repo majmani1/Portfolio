@@ -6,35 +6,37 @@ import Pdf from "../assets/images/iconsWindowsXP/pdf.png";
 import Docker from "../assets/images/Programming_Languages/docker.png";
 import Webserv from "../assets/images/Programming_Languages/webserv.jpg";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Draggable from "react-draggable";
 
 export default function WorksPdf(props) {
 	const [bigWindow, setBigWindow] = useState(true);
+	const dragRef = useRef();
+
 	function big_or_small() {
 		if (bigWindow) {
 			setBigWindow(false);
-			document.querySelector(".Pdf").style.width = "100vw";
-			document.querySelector(".Pdf").style.height = "96vh";
+			document.querySelector(".works").style.width = "100vw";
+			document.querySelector(".works").style.height = "96vh";
 
-			// document.querySelector(".Pdf").style.border = "0px";
-			document.querySelector(".Pdf").style.zIndex = "1";
+			// document.querySelector(".works").style.border = "0px";
+			document.querySelector(".works").style.zIndex = "1";
 			// document.querySelector(".works").style.top = "0";
 			// document.querySelector(".works").style.right = "0%";
 		} else {
 			setBigWindow(true);
-			document.querySelector(".Pdf").style.width = "50vw";
-			document.querySelector(".Pdf").style.height = "80vh";
+			document.querySelector(".works").style.width = "50vw";
+			document.querySelector(".works").style.height = "80vh";
 
-			document.querySelector(".Pdf").style.border = " 6px solid #0a25c0";
-			document.querySelector(".Pdf").style.zIndex = "1";
+			document.querySelector(".works").style.border = " 6px solid #0a25c0";
+			document.querySelector(".works").style.zIndex = "1";
 			document.querySelector(".works").style.top = "0";
 			document.querySelector(".works").style.right = "5%";
 		}
 	}
 	return (
-		<Draggable>
-			<div className="Pdf works">
+		<Draggable nodeRef={dragRef}>
+			<div className="Pdf works" ref={dragRef}>
 				<div className="readmeTitle">
 					<div className="NameIcon">
 						<img src={Pdf} className="IconFolderRedme"></img>
@@ -42,7 +44,12 @@ export default function WorksPdf(props) {
 					</div>
 					<div className="closeIcons">
 						<img src={Hide} className="closeIcon disable"></img>
-						<img src={Big} onClick={big_or_small} onTouchEnd={big_or_small} className="closeIcon "></img>
+						<img
+							src={Big}
+							onClick={big_or_small}
+							onTouchEnd={big_or_small}
+							className="closeIcon "
+						></img>
 						<img
 							src={Close}
 							onClick={() => props.setWorksPdf(false)}
@@ -77,6 +84,7 @@ export default function WorksPdf(props) {
 								enable real-time interactions, enhancing the user experience.
 							</p>
 							<a
+								target="_blank"
 								href="https://github.com/majmani1/webserv"
 								className="LinkProject"
 							>
@@ -97,6 +105,7 @@ export default function WorksPdf(props) {
 								multiple client requests.
 							</p>
 							<a
+								target="_blank"
 								href="https://github.com/majmani1/webserv"
 								className="LinkProject"
 							>
@@ -121,6 +130,7 @@ export default function WorksPdf(props) {
 								deploying services within a Docker environment.
 							</p>
 							<a
+								target="_blank"
 								href="https://github.com/majmani1/inception"
 								className="LinkProject"
 							>

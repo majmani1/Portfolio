@@ -4,23 +4,29 @@ import FooterHome from "../components/footerHome";
 import IconFolder from "../assets/images/iconsWindowsXP/folder.png";
 import Pdf from "../assets/images/iconsWindowsXP/pdf.png";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Readme from "../components/readme";
 import FolderPdf from "../components/folderPdf";
 import WorksPdf from "../components/pdfWorks";
+import EducationPdf from "../components/educationPdf";
 import Cv_fr from "../components/cvPdf";
+import Cv_an from "../components/cvPdfAn";
 import Draggable from "react-draggable";
 
-export default function Home() {
+export default function Home(props) {
 	const [showReadme, setShowReadme] = useState(false);
 	const [showAbout, setSHowAbout] = useState(false);
 	const [showWorksPdf, setWorksPdf] = useState(false);
+	const [showEducation, setEducation] = useState(false);
 	const [showCv_fr, setShowCV_fr] = useState(false);
+	const [showCv_an, setShowCV_an] = useState(false);
+
+	const dragRef = useRef();
 
 	return (
 		<div className="fullHome">
-			<Draggable enableUserSelectHack={false}>
-				<div className="folderIcon">
+			<Draggable nodeRef={dragRef} enableUserSelectHack={false}>
+				<div ref={dragRef} className="folderIcon">
 					<img
 						src={IconFolder}
 						className="IconFolder"
@@ -30,34 +36,43 @@ export default function Home() {
 					<div className="NameFolder">Readme</div>
 				</div>
 			</Draggable>
-			<div
-				className="folderIcon"
-				onClick={() => setShowCV_fr(true)}
-				onTouchEnd={() => setShowCV_fr(true)}
-			>
-				<img src={Pdf} className="IconFolder"></img>
-				<div className="NameFolder">Cv_Mouad_Ajmani(fr)</div>
-			</div>
-
-			<div className="folderIcon">
-				<img src={Pdf} className="IconFolder"></img>
-				<div className="NameFolder">Cv_Mouad_Ajmani(an)</div>
-			</div>
-
-			{/* <Readme /> */}
-			<Cv_fr />
-			{/* {showCv_fr && <Cv_fr setShowCV_fr={setShowCV_fr}></Cv_fr>} */}
+			<Draggable nodeRef={dragRef} enableUserSelectHack={false}>
+				<div
+					ref={dragRef}
+					className="folderIcon"
+					onClick={() => setShowCV_fr(true)}
+					onTouchEnd={() => setShowCV_fr(true)}
+				>
+					<img src={Pdf} className="IconFolder"></img>
+					<div className="NameFolder">Cv_Mouad_Ajmani(fr)</div>
+				</div>
+			</Draggable>
+			<Draggable nodeRef={dragRef}>
+				<div
+					ref={dragRef}
+					className="folderIcon"
+					onClick={() => setShowCV_an(true)}
+					onTouchEnd={() => setShowCV_an(true)}
+				>
+					<img src={Pdf} className="IconFolder"></img>
+					<div className="NameFolder">Cv_Mouad_Ajmani(an)</div>
+				</div>
+			</Draggable>
 			{showReadme && (
 				<Readme
 					setShowReadme={setShowReadme}
 					setSHowAbout={setSHowAbout}
 					setWorksPdf={setWorksPdf}
+					setEducation={setEducation}
 				/>
 			)}
 			{showAbout && <FolderPdf setSHowAbout={setSHowAbout} />}
 			{showWorksPdf && <WorksPdf setWorksPdf={setWorksPdf} />}
-			{/* <WorksPdf /> */}
-			<FooterHome />
+			{showEducation && <EducationPdf setEducation={setEducation} />}
+			{showCv_fr && <Cv_fr setShowCV_fr={setShowCV_fr}></Cv_fr>}
+
+			{showCv_an && <Cv_an setShowCV_an={setShowCV_an} />}
+			<FooterHome setShowPages={props.setShowPages} />
 		</div>
 	);
 }

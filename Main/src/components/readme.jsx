@@ -9,10 +9,12 @@ import Pdf from "../assets/images/iconsWindowsXP/pdf.png";
 import Close from "../assets/images/iconsWindowsXP/close.png";
 import Hide from "../assets/images/iconsWindowsXP/hide.png";
 import Big from "../assets/images/iconsWindowsXP/big.png";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Draggable from "react-draggable";
 
 export default function Readme(props) {
+	const dragRef = useRef();
+
 	const [bigWindowRedme, setBigWindowRedme] = useState(true);
 	function big_or_small() {
 		if (bigWindowRedme) {
@@ -32,8 +34,8 @@ export default function Readme(props) {
 		}
 	}
 	return (
-		<Draggable>
-			<div className="readme">
+		<Draggable nodeRef={dragRef}>
+			<div className="readme" ref={dragRef}>
 				<div className="readmeTitle">
 					<div className="NameIcon">
 						<img src={IconFloder} className="IconFolderRedme"></img>
@@ -81,7 +83,7 @@ export default function Readme(props) {
 				<div className="readmeSearch">
 					Address
 					<div className="divInput">
-						<span class="icon">📁</span>
+						<span className="icon">📁</span>
 						<input
 							type="text"
 							className="inputSearch"
@@ -96,15 +98,17 @@ export default function Readme(props) {
 					<div className="sideBarReadme">
 						<div className="tasks">
 							<div className="HeaderTasks">File and Folder Tasks</div>
-							<span class="iconTasks">📁 Make a new folder</span>
-							<span class="iconTasks">📁 Publish this folder to the web </span>
-							<span class="iconTasks">📁 Share this folder</span>
+							<span className="iconTasks">📁 Make a new folder</span>
+							<span className="iconTasks">
+								📁 Publish this folder to the web{" "}
+							</span>
+							<span className="iconTasks">📁 Share this folder</span>
 						</div>
 						<div className="places">
 							<div className="HeaderTasks">File and Folder Tasks</div>
-							<span class="iconTasks">📁 Documents and Settings</span>
-							<span class="iconTasks">📁 My Documents </span>
-							<span class="iconTasks">📁 Shared Documents</span>
+							<span className="iconTasks">📁 Documents and Settings</span>
+							<span className="iconTasks">📁 My Documents </span>
+							<span className="iconTasks">📁 Shared Documents</span>
 						</div>
 
 						<div className="HeaderTasks Details">File and Folder Tasks</div>
@@ -126,7 +130,11 @@ export default function Readme(props) {
 							<img src={Pdf} className="IconFolder"></img>
 							<div className="NameFolder NameFolderReadme">My Works</div>
 						</div>
-						<div className="folderIcon">
+						<div
+							className="folderIcon"
+							onClick={() => props.setEducation(true)}
+							onTouchEnd={() => props.setEducation(true)}
+						>
 							<img src={Pdf} className="IconFolder"></img>
 							<div className="NameFolder NameFolderReadme"> Education</div>
 						</div>
