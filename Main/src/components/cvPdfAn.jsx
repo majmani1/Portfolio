@@ -4,11 +4,11 @@ import Close from "../assets/images/iconsWindowsXP/close.png";
 import Hide from "../assets/images/iconsWindowsXP/hide.png";
 import Big from "../assets/images/iconsWindowsXP/big.png";
 import Pdf from "../assets/images/iconsWindowsXP/pdf.png";
-import CvPdf from "../assets/files/Ajmani_Mouad(fr).pdf";
+import CvPdf_an from "../assets/files/cv_Ajmani_Mouad(an).pdf";
 import { useRef, useState } from "react";
 import Draggable from "react-draggable";
 
-export default function Cvpdf(props) {
+export default function Cvpdfan(props) {
 	const [bigWindow, setBigWindow] = useState(true);
 	const dragRef = useRef();
 
@@ -40,7 +40,7 @@ export default function Cvpdf(props) {
 				<div className="readmeTitle">
 					<div className="NameIcon">
 						<img src={Pdf} className="IconFolderRedme"></img>
-						Cv_Mouad_Ajmani (fr)
+						Cv_Mouad_Ajmani (an)
 					</div>
 					<div className="closeIcons">
 						<img src={Hide} className="closeIcon disable"></img>
@@ -52,8 +52,8 @@ export default function Cvpdf(props) {
 						></img>
 						<img
 							src={Close}
-							onClick={() => props.setShowCV_fr(false)}
-							onTouchEnd={() => props.setShowCV_fr(false)}
+							onClick={() => props.setShowCV_an(false)}
+							onTouchEnd={() => props.setShowCV_an(false)}
 							className="closeIcon"
 						></img>
 					</div>
@@ -71,17 +71,17 @@ export default function Cvpdf(props) {
 
 				<a
 					className="buttonDownload"
-					href={CvPdf}
-					download="Ajmani_Mouad_CV(fr).pdf"
+					href={CvPdf_an}
+					download="Ajmani_Mouad_CV(an).pdf"
 				>
 					{" "}
-					Télécharger
+					Download
 				</a>
 				<div className="  cvs">
 					<div className="infosPerso">
 						<span className="Name">Mouad Ajmani</span>
 						<p>
-							<i>Ingénieur logiciel</i>
+							<i>Software Engineer</i>
 						</p>
 						<div className="Contacts">
 							<span>mouadajmani@gmail.com</span>
@@ -92,21 +92,20 @@ export default function Cvpdf(props) {
 						</div>
 					</div>
 					<div className="titleCv">
-						<i>Projets</i>
+						<i>PROJECTS</i>
 					</div>
 					<div className="discription">
 						<strong>FT_TRANSCENDENCE</strong>
 						<p>
-							• Développement d'une application web de ping-pong en ligne avec
-							un front-end en JavaScript pur, un back- end en Django, et une
-							base de données PostgreSQL.{" "}
+							• Developed an online ping-pong web application with a front-end
+							built using vanilla JavaScript, Django for the back-end, and
+							PostgreSQL for the database.{" "}
 						</p>
 
 						<p>
-							• Contribution au design et à l'implémentation des mécaniques de
-							jeu sur le front-end et le back-end. Utilisation de WebSockets
-							pour activer les interactions en temps réel, améliorant ainsi
-							l'expérience utilisateur.
+							• Contributed by designing and implementing the game mechanics on
+							both the front-end and back-end. Utilized WebSockets to enable
+							real-time interactions, enhancing the user experience.
 						</p>
 						<strong>Serveur Web HTTP</strong>
 						<p>
@@ -115,15 +114,14 @@ export default function Cvpdf(props) {
 						</p>
 
 						<p>
-							• Expertise en programmation avec sockets et multiplexage pour
-							améliorer l'efficacité du serveur et gérer les requêtes clients
-							simultanément.
+							• Applied expertise in sockets programming and multiplexing to
+							enhance the server's efficiency, enabling concurrent handling of
+							multiple client requests.
 						</p>
 						<strong>INCEPTION</strong>
 						<p>
-							• Projet axé sur l'approfondissement de mes compétences en Docker
-							via la configuration de services divers dans des conteneurs
-							séparés.
+							• Inception focuses on expanding my Docker expertise by
+							configuring diverse services in separate containers.
 						</p>
 						<p>
 							• Using tools like Docker, docker-compose, and incorporating
@@ -136,34 +134,35 @@ export default function Cvpdf(props) {
 						</p>
 					</div>
 					<div className="titleCv">
-						<i>FORMATION</i>
+						<i>EDUCATION</i>
 					</div>
 					<div className="Education">
 						<strong>Software Developer</strong>
-						<i>École de Codage 1337, Université Polytechnique Mohammed VI</i>
+						<i>1337 Coding School, Mohammed VI Polytechnic University</i>
 						<p>
-							• <strong>Cours pertinents :</strong> Développement Web,
-							Algorithmes, Unix, Administration Réseau et Système, Programmation
-							Orientée Objet, Graphisme, Systèmes d'Exploitation, Structures de
-							Données.
+							• <strong>Relevant Coursework:</strong> Web Development,
+							Algorithms, Unix, Network and System Administration, Object
+							Oriented Programming, Graphics, Operating Systems, Data Structures
 						</p>
 
-						<strong>Licence Professionnelle Communication Digitale</strong>
+						<strong>
+							PROFESSIONAL LICENSE IN PROFESSIONS DIGITAL COMMUNICATION
+						</strong>
 						<i>FACULTY OF LETTERS AND HUMAN SCIENCESr</i>
 						<p>
-							• <strong>Cours pertinents :</strong> Développement Web, Design,
-							Communication.
+							• <strong>Relevant Coursework:</strong> Web Development, Design,
+							Communication
 						</p>
 
-						<strong>Technicien Spécialisé en Développement Multimédia</strong>
+						<strong>Specialized Technician Multimedia Development</strong>
 						<i>Ista Ntic, OFPPT</i>
 						<p>
-							• <strong>Cours pertinents :</strong> Algorithmes, Développement
-							Web, Graphisme, Design, UX/UI, Structures de Données.
+							• <strong>Relevant Coursework:</strong> Algorithms , Web
+							Development, Graphics, Design, UX/UI, Algorithms, Data Structures.
 						</p>
 					</div>
 					<div className="titleCv">
-						<i>COMPÉTENCES</i>
+						<i>SKILLS</i>
 					</div>
 
 					<div className="Education">
@@ -174,7 +173,7 @@ export default function Cvpdf(props) {
 						</p>
 					</div>
 					<div className="titleCv">
-						<i>CERTIFICATS</i>
+						<i>CERTIFICATES</i>
 					</div>
 					<ul>
 						<li>FORMATION QUALIFIANTE EN LANGUAGE PYTHON. (ISTA)</li>

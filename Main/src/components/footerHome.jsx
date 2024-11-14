@@ -17,7 +17,7 @@ export default function FooterHome(props) {
 	}
 	return (
 		<div className="footerHome">
-			{showLeftSide && <LeftSide />}
+			{showLeftSide && <LeftSide setShowPages={props.setShowPages}/>}
 			<div onClick={show_or_hide_lefSide} className="iconWindows">
 				<div className="icon"></div>
 				<span> Start</span>

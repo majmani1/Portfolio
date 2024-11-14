@@ -3,11 +3,13 @@ import Close from "../assets/images/iconsWindowsXP/close.png";
 import Hide from "../assets/images/iconsWindowsXP/hide.png";
 import Big from "../assets/images/iconsWindowsXP/big.png";
 import Pdf from "../assets/images/iconsWindowsXP/pdf.png";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Draggable from "react-draggable";
 
 export default function FolderPdf(props) {
 	const [bigWindow, setBigWindow] = useState(true);
+	const dragRef = useRef();
+
 	function big_or_small() {
 		if (bigWindow) {
 			setBigWindow(false);
@@ -31,8 +33,8 @@ export default function FolderPdf(props) {
 		}
 	}
 	return (
-		<Draggable>
-			<div className="Pdf about">
+		<Draggable nodeRef={dragRef}>
+			<div className="Pdf about" ref={dragRef}>
 				<div className="readmeTitle">
 					<div className="NameIcon">
 						<img src={Pdf} className="IconFolderRedme"></img>

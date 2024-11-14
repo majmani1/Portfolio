@@ -14,10 +14,11 @@ import Ofppt from "../assets/images/Programming_Languages/ofppt.png";
 import ReactLogo from "../assets/images/Programming_Languages/react.png";
 import Log from "../assets/images/iconsWindowsXP/log.ico";
 import TurnOff from "../assets/images/iconsWindowsXP/turnOff.ico";
+import { useState } from "react";
 
 import SocialMedia from "./socialMedia";
 import Skills from "./skills";
-export default function LeftSide() {
+export default function LeftSide(props) {
 	return (
 		<div className="fullLeftSIde">
 			<div className="header">
@@ -47,7 +48,7 @@ export default function LeftSide() {
 				<Skills picture={Meta} title="Programming with JavaScript" />
 			</div>
 			<div className="footerLeftSide">
-				<div className="turnLog">
+				<div className="turnLog" onClick={() => props.setShowPages("log")}>
 					<div
 						className="logoLogs"
 						style={{ backgroundImage: `url(${Log})` }}
