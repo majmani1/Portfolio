@@ -30,7 +30,7 @@ export default function LogPage() {
 			<div className="mainLogPage">
 				<div className="leftSideLogPage">
 					<img className="logo_windowsXpLogPage" src={logo_windowsXp} />
-					<span className="titleLogPage">To begin, click your user name</span>
+					<span className="titleLogPage">To begin, click my user name</span>
 				</div>
 				<div className="rightSideLogPage">
 					<div className="profils" onClick={ShowInfosUser}>
@@ -51,8 +51,8 @@ export default function LogPage() {
 					Restart computer
 				</button>
 				<div className="footerText">
-					This is my portfolio website, I made it with ReactJs, I hope you like
-					it
+					This is my portfolio website, which I built using ReactJS. I hope you
+					like it!
 				</div>
 			</div>
 		</div>

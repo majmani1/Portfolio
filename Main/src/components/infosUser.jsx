@@ -27,7 +27,6 @@ export default function Infosuser(props) {
 	
 	function checkPassword() {
 		if (inputText === "1337") {
-			console.log("Welcome to your profile");
 			props.setShowPages("Home");
 		} else {
 			notify();
@@ -36,13 +35,11 @@ export default function Infosuser(props) {
 	const handleKeyDown = (e) => {
 		if (e.key === "Enter") {
 			if (inputText === "1337") {
-				console.log("Welcome to your profile");
 				// setShowPages(true);
 				props.setShowPages("Home");
 			} else {
 				notify();
 			}
-			console.log("Input data:", inputText);
 		}
 	};
 	 
