@@ -72,3 +72,11 @@
 		transform: translateX(2000%);
 	}
 }
+
+
+@media screen and (max-width: 768px) {
+	.logo_windowsXp{
+		width: 38vh;
+		height: 33vh;
+	}
+}

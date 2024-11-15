@@ -6,7 +6,7 @@
 	top: 10%;
 	left: 4%;
 	overflow: hidden;
-	border: 6px solid #0a25c0;
+	border: 0.5vw solid #0a25c0;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -28,8 +28,8 @@
 	overflow-x: hidden;
 	overflow-y: hidden;
 	/* overflow-y: scroll; */
-	
-	border: 6px solid #0a25c0;
+
+	border: 0.5vw solid #0a25c0;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -38,7 +38,7 @@
 	right: 5%;
 }
 
-.education{
+.education {
 	top: 5%;
 	right: 28%;
 }
@@ -305,4 +305,11 @@
 	font-family: "Tahoma", sans-serif;
 	color: black;
 	align-items: start;
+}
+
+@media screen and (max-width: 768px) {
+	.readme,
+	.Pdf {
+		height: 40vh;
+	}
 }
