@@ -25,7 +25,6 @@ const useWeather = () => {
 
 				setWeather({ temperature: temp, iconUrl, city });
 			} catch (err) {
-				console.log("fetch error ", err);
 				setError("Failed to fetch weather or location data.");
 			}
 		};

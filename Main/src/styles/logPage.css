@@ -193,3 +193,55 @@
 	}
 	
 } */
+
+@media screen and (max-width: 768px) {
+	.footerText {
+		font-size: 3vw;
+		width: 50vw;
+	}
+
+	.buttonRestart{
+	font-size: 2.5vw;
+	height: 12vw;
+	width: 40vw;
+
+
+	}
+	.logo_windowsXpLogPage{
+		height: 20vw;
+		width: 30vw;
+		margin-right: 5vw;
+	}
+	.titleLogPage{
+		font-size: 3vw;
+		margin-right: 5vw;
+	}
+	.profils{
+		height: 16vw;
+		background: #1440b5;
+	}
+	.pictureUser_logPage{
+		height: 12vw;
+		width: 12vw;
+		margin-left: 5vw;
+	}
+	.nameUser_logPage{
+		font-size: 3vw;
+	}
+	.password_logPage{
+		font-size: 1.5vw;
+	}
+	.inputs{
+		height: 50%;
+	}
+	.inputPassword_logPage{
+		width: 70%;
+		font-size: 2.5vw;
+	}
+	.logoNext{
+		width: 4vw;
+		height: 4vw;
+		/* margin-top: 2vw; */
+		/* margin-left: 5vw; */
+	}
+}

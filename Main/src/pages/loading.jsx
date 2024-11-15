@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 export default function Loading_windowsXp() {
 	const notify = () =>
-		toast("For a better experience, press F11.", {
+		toast("For a better experience, press F11 or Fn + F11.", {
 			position: "top-right",
 			autoClose: 3500,
 			hideProgressBar: false,
@@ -25,7 +25,6 @@ export default function Loading_windowsXp() {
 		if (showHome == false) {
 			const timer = setTimeout(() => {
 				setShowHome(true);
-				console.log("OOO");
 			}, 5000);
 
 			return () => clearTimeout(timer);
