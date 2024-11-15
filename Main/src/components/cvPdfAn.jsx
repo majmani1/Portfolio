@@ -28,9 +28,9 @@ export default function Cvpdfan(props) {
 			document.querySelector(".Pdf").style.width = "50vw";
 			document.querySelector(".Pdf").style.height = "80vh";
 			document.querySelector(".about").style.top = "0";
-			document.querySelector(".Pdf").style.border = " 6px solid #0a25c0";
+			document.querySelector(".Pdf").style.border = " .5vw solid #0a25c0";
 			document.querySelector(".Pdf").style.zIndex = "1";
-			document.querySelector(".Pdf").style.border = " 6px solid #0a25c0";
+			document.querySelector(".Pdf").style.border = " .5vw solid #0a25c0";
 			document.querySelector(".about").style.left = "2%";
 		}
 	}

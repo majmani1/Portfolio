@@ -43,8 +43,19 @@ export default function Home(props) {
 					onClick={() => setShowCV_fr(true)}
 					onTouchEnd={() => setShowCV_fr(true)}
 				>
-					<img src={Pdf} className="IconFolder"></img>
-					<div className="NameFolder">Cv_Mouad_Ajmani(fr)</div>
+					<img
+						src={Pdf}
+						className="IconFolder"
+						onClick={() => setShowCV_fr(true)}
+						onTouchEnd={() => setShowCV_fr(true)}
+					></img>
+					<div
+						className="NameFolder"
+						onClick={() => setShowCV_fr(true)}
+						onTouchEnd={() => setShowCV_fr(true)}
+					>
+						Cv_Mouad_Ajmani(fr)
+					</div>
 				</div>
 			</Draggable>
 			<Draggable nodeRef={dragRef}>
@@ -54,8 +65,19 @@ export default function Home(props) {
 					onClick={() => setShowCV_an(true)}
 					onTouchEnd={() => setShowCV_an(true)}
 				>
-					<img src={Pdf} className="IconFolder"></img>
-					<div className="NameFolder">Cv_Mouad_Ajmani(an)</div>
+					<img
+						src={Pdf}
+						className="IconFolder"
+						onClick={() => setShowCV_an(true)}
+						onTouchEnd={() => setShowCV_an(true)}
+					></img>
+					<div
+						className="NameFolder"
+						onClick={() => setShowCV_an(true)}
+						onTouchEnd={() => setShowCV_an(true)}
+					>
+						Cv_Mouad_Ajmani(an)
+					</div>
 				</div>
 			</Draggable>
 			{showReadme && (

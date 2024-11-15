@@ -29,7 +29,7 @@ export default function EducationPdf(props) {
 			document.querySelector(".education").style.width = "50vw";
 			document.querySelector(".education").style.height = "80vh";
 
-			document.querySelector(".education").style.border = " 6px solid #0a25c0";
+			document.querySelector(".education").style.border = " .5vw solid #0a25c0";
 			document.querySelector(".education").style.zIndex = "1";
 			document.querySelector(".education").style.top = "0";
 			document.querySelector(".education").style.right = "5%";

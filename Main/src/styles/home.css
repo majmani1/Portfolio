@@ -6,8 +6,6 @@
 	background-position: center;
 	background-size: cover;
 }
- 
- 
 
 .parent > div {
 	/* background: red; */
@@ -22,7 +20,7 @@
 	width: 100%;
 }
 
-.widowsOpen{
+.widowsOpen {
 	display: flex;
 	justify-content: start;
 	align-items: center;
@@ -31,7 +29,7 @@
 	background: red;
 }
 
-.windwOpenIcon{
+.windwOpenIcon {
 	width: 10%;
 	height: 100%;
 	background: green;
@@ -174,7 +172,7 @@
 	justify-content: end;
 }
 
-.turnLog{
+.turnLog {
 	display: flex;
 	/* justify-content: space-between; */
 	align-items: center;
@@ -186,12 +184,11 @@
 	cursor: pointer;
 }
 
-.logoLogs{
+.logoLogs {
 	width: 4vw;
 	height: 4vw;
 	background-size: cover;
 	background-position: center;
-	
 }
 
 .left_side {
@@ -266,8 +263,7 @@
 	margin-left: 4%;
 }
 
-
-.skills:hover{
+.skills:hover {
 	background: #3b87e7;
 	cursor: pointer;
 }
@@ -281,7 +277,7 @@
 }
 
 .nameSkill {
-	font-size: .9vw;
+	font-size: 0.9vw;
 	/* font-weight: bold; */
 	margin-left: 5%;
 	font-family: "Tahoma", sans-serif;
@@ -301,7 +297,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	font-size: .8vw;
+	font-size: 0.8vw;
 	/* font-weight: bold; */
 	color: white;
 	margin-left: 1vw;
@@ -311,11 +307,10 @@
 	/* margin-top: 1vw; */
 }
 
-.folderIcon .NameFolder{
+.folderIcon .NameFolder {
 	/* width: 100%; */
 	/* height: 100%; */
 	/* text-align: center; */
-	
 }
 
 .folderIcon:hover > .NameFolder {
@@ -330,4 +325,73 @@
 
 .folderIcon:hover {
 	cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+	.folderIcon {
+		height: 10vw;
+		width: 10vw;
+		margin-left: 5vw;
+		font-size: 2vw;
+
+		margin-top: 2vw;
+	}
+	.IconFolder {
+		width: 7vw;
+		height: 7vw;
+		/* margin-top: 4vw; */
+	}
+
+	.footerHome {
+		height: 12vw;
+	}
+	.iconWindows {
+		width: 23%;
+	}
+	.iconWindows span {
+		font-size: 5vw;
+		color: white;
+		font-weight: bold;
+		margin-top: -0.5vw;
+	}
+	.iconWindows .icon {
+		width: 6vw;
+		height: 6vw;
+	}
+	.dateMeteo {
+		width: 30%;
+	}
+	.meteoIcon {
+		width: 3vw;
+		height: 3vw;
+	}
+	.msnIcon {
+		width: 3vw;
+		height: 3vw;
+	}
+	.time {
+		font-size: 2vw;
+	}
+	.dateMeteo .meteo {
+		font-size: 1.5vw;
+	}
+	.fullLeftSIde {
+		bottom: 12vw;
+		height: 70vw;
+		width: 70vw;
+	}
+	.pictureMouad {
+		width: 8vw;
+		height: 8vw;
+	}
+	.nameMouad {
+		font-size: 3vw;
+	}
+	.pictureSkill {
+		width: 5vw;
+		height: 5vw;
+	}
+	.nameSkill {
+		font-size: 2vw;
+	}
 }
