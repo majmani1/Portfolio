@@ -87,7 +87,8 @@
 	);
 	/* background: green; */
 	display: flex;
-	justify-content: center;
+	padding-left: 2vw;
+	/* justify-content: center; */
 	align-items: center;
 	animation: windows 3s ease-in-out infinite;
 }
@@ -183,6 +184,8 @@
 	color: white;
 	cursor: pointer;
 }
+
+ 
 
 .logoLogs {
 	width: 4vw;

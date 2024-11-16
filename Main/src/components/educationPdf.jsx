@@ -75,14 +75,18 @@ export default function EducationPdf(props) {
 						<img src={School13} className="MyWorksImg"></img>
 						<div className="DescriptionProject">
 							<p>
-								• Developed an online ping-pong web application with a front-end
-								built using vanilla JavaScript, Django for the back-end, and
-								PostgreSQL for the database.
+								•{" "}
+								<strong>
+									École de Codage 1337, Université Polytechnique Mohammed VI
+								</strong>
+								<br></br>
+							<i>Software Developer</i>
 							</p>{" "}
 							<p>
-								• Contributed by designing and implementing the game mechanics
-								on both the front-end and back-end. Utilized WebSockets to
-								enable real-time interactions, enhancing the user experience.
+								• <strong>Cours pertinents :</strong> Développement Web,
+								Algorithmes, Unix, Administration Réseau et Système,
+								Programmation Orientée Objet, Graphisme, Systèmes
+								d'Exploitation, Structures de Données.
 							</p>
 							<a
 								target="_blank"
@@ -97,13 +101,12 @@ export default function EducationPdf(props) {
 						<img src={Flsh} className="MyWorksImg"></img>
 						<div className="DescriptionProject">
 							<p>
-								• Contributed to the development of a custom web server,
-								focusing on HTTP methods (GET, POST, DELETE) implementation.{" "}
-							</p>
+								• <strong>FACULTY OF LETTERS AND HUMAN SCIENCES</strong>
+							</p>{" "}
+							<i>Licence Professionnelle Communication Digitale</i>
 							<p>
-								• Applied expertise in sockets programming and multiplexing to
-								enhance the server's efficiency, enabling concurrent handling of
-								multiple client requests.
+								• <strong>Cours pertinents :</strong> Développement Web, Design,
+								Communication.
 							</p>
 							<a
 								target="_blank"
@@ -118,17 +121,12 @@ export default function EducationPdf(props) {
 						<img src={Ofppt} className="MyWorksImg"></img>
 						<div className="DescriptionProject">
 							<p>
-								• Inception focuses on expanding my Docker expertise by
-								configuring diverse services in separate containers.
-							</p>
+								• <strong>Ista Ntic, OFPPT</strong>
+							</p>{" "}
+							<i>Technicien Spécialisé en Développement Multimédia</i>
 							<p>
-								• Using tools like Docker, docker-compose, and incorporating
-								MariaDB, Nginx, and WordPress.
-							</p>
-							<p>
-								• the project aims to enhance my knowledge in containerization
-								and orchestration, fostering a comprehensive understanding of
-								deploying services within a Docker environment.
+								• <strong>Cours pertinents :</strong> Algorithmes, Développement
+								Web, Graphisme, Design, UX/UI, Structures de Données.
 							</p>
 							<a
 								target="_blank"

@@ -14,6 +14,7 @@ import Ofppt from "../assets/images/Programming_Languages/ofppt.png";
 import ReactLogo from "../assets/images/Programming_Languages/react.png";
 import Log from "../assets/images/iconsWindowsXP/log.ico";
 import TurnOff from "../assets/images/iconsWindowsXP/turnOff.ico";
+import Restart from "../assets/images/Windows-Restart-icon.png";
 import { useState } from "react";
 
 import SocialMedia from "./socialMedia";
@@ -55,12 +56,12 @@ export default function LeftSide(props) {
 					></div>
 					Log Off
 				</div>
-				<div className="turnLog">
+				<div className="turnLog " onClick={() => props.setShowPages("loading")}>
 					<div
 						className="logoLogs"
 						style={{ backgroundImage: `url(${TurnOff})` }}
 					></div>
-					Log Off
+					Restart
 				</div>
 			</div>
 		</div>

@@ -5,7 +5,7 @@ import Big from "../assets/images/iconsWindowsXP/big.png";
 import Pdf from "../assets/images/iconsWindowsXP/pdf.png";
 import Docker from "../assets/images/Programming_Languages/docker.png";
 import Webserv from "../assets/images/Programming_Languages/webserv.jpg";
-
+import Trancendance from "../assets/images/Programming_Languages/trancendance.png"
 import { useRef, useState } from "react";
 import Draggable from "react-draggable";
 
@@ -71,7 +71,7 @@ export default function WorksPdf(props) {
 
 				<div className="SpaceText">
 					<div className="MyWorks">
-						<img src={Webserv} className="MyWorksImg"></img>
+						<img src={Trancendance} className="MyWorksImg"></img>
 						<div className="DescriptionProject">
 							<p>
 								• Developed an online ping-pong web application with a front-end
