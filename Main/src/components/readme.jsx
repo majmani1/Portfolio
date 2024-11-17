@@ -138,10 +138,10 @@ export default function Readme(props) {
 							<img src={Pdf} className="IconFolder"></img>
 							<div className="NameFolder NameFolderReadme"> Education</div>
 						</div>
-						<div className="folderIcon">
+						{/* <div className="folderIcon">
 							<img src={Pdf} className="IconFolder"></img>
 							<div className="NameFolder NameFolderReadme">Contact me</div>
-						</div>
+						</div> */}
 					</div>
 				</div>
 				{/* <div className="readmeContent"></div> */}
