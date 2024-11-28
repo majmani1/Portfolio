@@ -34,14 +34,14 @@ export default function Readme(props) {
 		}
 	}
 	return (
-		<Draggable nodeRef={dragRef}>
+		<Draggable nodeRef={dragRef} cancel=".interactive">
 			<div className="readme" ref={dragRef}>
-				<div className="readmeTitle">
+				<div className="readmeTitle ">
 					<div className="NameIcon">
 						<img src={IconFloder} className="IconFolderRedme"></img>
 						Readme
 					</div>
-					<div className="closeIcons">
+					<div className="closeIcons ">
 						<img src={Hide} className="closeIcon disable"></img>
 						<img
 							src={Big}
@@ -57,7 +57,7 @@ export default function Readme(props) {
 						></img>
 					</div>
 				</div>
-				<div className="menuTextReadme">
+				<div className="menuTextReadme interactive">
 					<ul>
 						<li>File</li>
 						<li>Edit</li>
@@ -67,7 +67,7 @@ export default function Readme(props) {
 						<li>Help</li>
 					</ul>
 				</div>
-				<div className="menuIconReadme">
+				<div className="menuIconReadme interactive">
 					<img src={BackIcon} className="backIcon"></img>
 					Back &#9660;
 					<img src={BackIcon} className="backIcon otherSide"></img>
@@ -80,7 +80,7 @@ export default function Readme(props) {
 					<img src={TableIcon} className="backIcon"></img>
 					&#9660;
 				</div>
-				<div className="readmeSearch">
+				<div className="readmeSearch interactive">
 					Address
 					<div className="divInput">
 						<span className="icon">📁</span>
@@ -94,7 +94,7 @@ export default function Readme(props) {
 					<img src={BackIcon} className="backIconInput"></img>
 					GO
 				</div>
-				<div className="contentReadme">
+				<div className="contentReadme interactive">
 					<div className="sideBarReadme">
 						<div className="tasks">
 							<div className="HeaderTasks">File and Folder Tasks</div>

@@ -36,9 +36,9 @@ export default function EducationPdf(props) {
 		}
 	}
 	return (
-		<Draggable nodeRef={dragRef}>
+		<Draggable nodeRef={dragRef} cancel=".interactive">
 			<div className="Pdf education" ref={dragRef}>
-				<div className="readmeTitle">
+				<div className="readmeTitle  ">
 					<div className="NameIcon">
 						<img src={Pdf} className="IconFolderRedme"></img>
 						Education
@@ -59,7 +59,7 @@ export default function EducationPdf(props) {
 						></img>
 					</div>
 				</div>
-				<div className="menuTextReadme">
+				<div className="menuTextReadme interactive">
 					<ul>
 						<li>File</li>
 						<li>Edit</li>
@@ -70,7 +70,7 @@ export default function EducationPdf(props) {
 					</ul>
 				</div>
 
-				<div className="SpaceText">
+				<div className="SpaceText interactive">
 					<div className="MyWorks">
 						<img src={School13} className="MyWorksImg"></img>
 						<div className="DescriptionProject">

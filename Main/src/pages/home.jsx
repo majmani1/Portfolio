@@ -20,11 +20,11 @@ export default function Home(props) {
 	const [showEducation, setEducation] = useState(false);
 	const [showCv_fr, setShowCV_fr] = useState(false);
 	const [showCv_an, setShowCV_an] = useState(false);
-
+	
 	const dragRef = useRef();
 
 	return (
-		<div className="fullHome">
+		<div className="fullHome" >
 			<Draggable nodeRef={dragRef} enableUserSelectHack={false}>
 				<div ref={dragRef} className="folderIcon">
 					<img
