@@ -35,7 +35,7 @@ export default function Cvpdf(props) {
 		}
 	}
 	return (
-		<Draggable nodeRef={dragRef}>
+		<Draggable nodeRef={dragRef} cancel=".interactive">
 			<div className="Pdf about" ref={dragRef}>
 				<div className="readmeTitle">
 					<div className="NameIcon">
@@ -58,7 +58,7 @@ export default function Cvpdf(props) {
 						></img>
 					</div>
 				</div>
-				<div className="menuTextReadme">
+				<div className="menuTextReadme interactive">
 					<ul>
 						<li>File</li>
 						<li>Edit</li>
@@ -70,14 +70,14 @@ export default function Cvpdf(props) {
 				</div>
 
 				<a
-					className="buttonDownload"
+					className="buttonDownload interactive"
 					href={CvPdf}
 					download="Ajmani_Mouad_CV(fr).pdf"
 				>
 					{" "}
 					Télécharger
 				</a>
-				<div className="  cvs">
+				<div className="  cvs interactive">
 					<div className="infosPerso">
 						<span className="Name">Mouad Ajmani</span>
 						<p>
