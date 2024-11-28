@@ -33,7 +33,7 @@ export default function FolderPdf(props) {
 		}
 	}
 	return (
-		<Draggable nodeRef={dragRef}>
+		<Draggable nodeRef={dragRef} cancel=".interactive">
 			<div className="Pdf about" ref={dragRef}>
 				<div className="readmeTitle">
 					<div className="NameIcon">
@@ -56,7 +56,7 @@ export default function FolderPdf(props) {
 						></img>
 					</div>
 				</div>
-				<div className="menuTextReadme">
+				<div className="menuTextReadme interactive">
 					<ul>
 						<li>File</li>
 						<li>Edit</li>
@@ -67,7 +67,7 @@ export default function FolderPdf(props) {
 					</ul>
 				</div>
 
-				<div className="SpaceText">
+				<div className="SpaceText interactive">
 					<h1>Hi, I'm Mouad Ajmani</h1>
 					<p>
 						I am a Full Stack Developer, and I have a passion for coding. I love
