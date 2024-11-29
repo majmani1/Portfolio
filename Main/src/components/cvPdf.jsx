@@ -110,8 +110,8 @@ export default function Cvpdf(props) {
 						</p>
 						<strong>Serveur Web HTTP</strong>
 						<p>
-							• Contributed to the development of a custom web server, focusing
-							on HTTP methods (GET, POST, DELETE) implementation.
+							• Contribution au développement d'un serveur web personnalisé,
+							avec la mise en œuvre des méthodes HTTP (GET, POST, DELETE).
 						</p>
 
 						<p>
@@ -126,20 +126,16 @@ export default function Cvpdf(props) {
 							séparés.
 						</p>
 						<p>
-							• Using tools like Docker, docker-compose, and incorporating
-							MariaDB, Nginx, and WordPress.
-						</p>
-						<p>
-							• the project aims to enhance my knowledge in containerization and
-							orchestration, fostering a comprehensive understanding of
-							deploying services within a Docker environment.
+							• Utilisation d'outils comme Docker, docker-compose, et
+							intégration de MariaDB, Nginx, et WordPress pour une compréhension
+							globale du déploiement de services dans un environnement Docker.
 						</p>
 					</div>
 					<div className="titleCv">
 						<i>FORMATION</i>
 					</div>
 					<div className="Education">
-						<strong>Software Developer</strong>
+						<strong>Développeur Logiciel</strong>
 						<i>École de Codage 1337, Université Polytechnique Mohammed VI</i>
 						<p>
 							• <strong>Cours pertinents :</strong> Développement Web,
