@@ -116,7 +116,7 @@ export default function Readme(props) {
 					<div className="filesReadme">
 						<div
 							className="folderIcon"
-							onClick={() => props.setSHowAbout(true)}
+							onDoubleClick={() => props.setSHowAbout(true)}
 							onTouchEnd={() => props.setSHowAbout(true)}
 						>
 							<img src={Pdf} className="IconFolder"></img>
@@ -124,7 +124,7 @@ export default function Readme(props) {
 						</div>
 						<div
 							className="folderIcon"
-							onClick={() => props.setWorksPdf(true)}
+							onDoubleClick={() => props.setWorksPdf(true)}
 							onTouchEnd={() => props.setWorksPdf(true)}
 						>
 							<img src={Pdf} className="IconFolder"></img>
@@ -132,7 +132,7 @@ export default function Readme(props) {
 						</div>
 						<div
 							className="folderIcon"
-							onClick={() => props.setEducation(true)}
+							onDoubleClick={() => props.setEducation(true)}
 							onTouchEnd={() => props.setEducation(true)}
 						>
 							<img src={Pdf} className="IconFolder"></img>
