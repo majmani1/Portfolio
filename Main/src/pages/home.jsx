@@ -20,17 +20,17 @@ export default function Home(props) {
 	const [showEducation, setEducation] = useState(false);
 	const [showCv_fr, setShowCV_fr] = useState(false);
 	const [showCv_an, setShowCV_an] = useState(false);
-	
+
 	const dragRef = useRef();
 
 	return (
-		<div className="fullHome" >
+		<div className="fullHome">
 			<Draggable nodeRef={dragRef} enableUserSelectHack={false}>
 				<div ref={dragRef} className="folderIcon">
 					<img
 						src={IconFolder}
 						className="IconFolder"
-						onClick={() => setShowReadme(true)}
+						onDoubleClick={() => setShowReadme(true)}
 						onTouchEnd={() => setShowReadme(true)}
 					></img>
 					<div className="NameFolder">Readme</div>
@@ -40,18 +40,18 @@ export default function Home(props) {
 				<div
 					ref={dragRef}
 					className="folderIcon"
-					onClick={() => setShowCV_fr(true)}
+					onDoubleClick={() => setShowCV_fr(true)}
 					onTouchEnd={() => setShowCV_fr(true)}
 				>
 					<img
 						src={Pdf}
 						className="IconFolder"
-						onClick={() => setShowCV_fr(true)}
+						onDoubleClick={() => setShowCV_fr(true)}
 						onTouchEnd={() => setShowCV_fr(true)}
 					></img>
 					<div
 						className="NameFolder"
-						onClick={() => setShowCV_fr(true)}
+						onDoubleClick={() => setShowCV_fr(true)}
 						onTouchEnd={() => setShowCV_fr(true)}
 					>
 						Cv_Mouad_Ajmani(fr)
@@ -62,18 +62,18 @@ export default function Home(props) {
 				<div
 					ref={dragRef}
 					className="folderIcon"
-					onClick={() => setShowCV_an(true)}
+					onDoubleClick={() => setShowCV_an(true)}
 					onTouchEnd={() => setShowCV_an(true)}
 				>
 					<img
 						src={Pdf}
 						className="IconFolder"
-						onClick={() => setShowCV_an(true)}
+						onDoubleClick={() => setShowCV_an(true)}
 						onTouchEnd={() => setShowCV_an(true)}
 					></img>
 					<div
 						className="NameFolder"
-						onClick={() => setShowCV_an(true)}
+						onDoubleClick={() => setShowCV_an(true)}
 						onTouchEnd={() => setShowCV_an(true)}
 					>
 						Cv_Mouad_Ajmani(an)
