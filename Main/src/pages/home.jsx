@@ -3,6 +3,7 @@ import "../styles/home.css";
 import FooterHome from "../components/footerHome";
 import IconFolder from "../assets/images/iconsWindowsXP/folder.png";
 import Pdf from "../assets/images/iconsWindowsXP/pdf.png";
+import IconWindows from "../assets/images/icon_windowsXp.png";
 
 import { useRef, useState } from "react";
 import Readme from "../components/readme";
@@ -12,6 +13,7 @@ import EducationPdf from "../components/educationPdf";
 import Cv_fr from "../components/cvPdf";
 import Cv_an from "../components/cvPdfAn";
 import Draggable from "react-draggable";
+import Feedbacks from "../components/feedbacks";
 
 export default function Home(props) {
 	const [showReadme, setShowReadme] = useState(false);
@@ -20,11 +22,29 @@ export default function Home(props) {
 	const [showEducation, setEducation] = useState(false);
 	const [showCv_fr, setShowCV_fr] = useState(false);
 	const [showCv_an, setShowCV_an] = useState(false);
-
+	const [showLinkedin, setShowLinkedin] = useState(false);
 	const dragRef = useRef();
+	// function handleRightClick(e) {
+	// 	console.log("right click");
+	// 	e.preventDefault();
+	// }
 
 	return (
+		//onContextMenu={handleRightClick}
 		<div className="fullHome">
+			
+
+			<Draggable nodeRef={dragRef} enableUserSelectHack={false}>
+				<div ref={dragRef} className="folderIcon FeedbackPortfolio">
+					<img
+						src={IconWindows}
+						className="IconFolder"
+						onDoubleClick={() => setShowLinkedin(true)}
+						onTouchEnd={() => setShowLinkedin(true)}
+					></img>
+					<div className="NameFolder">Feedback For Portfolio</div>
+				</div>
+			</Draggable>
 			<Draggable nodeRef={dragRef} enableUserSelectHack={false}>
 				<div ref={dragRef} className="folderIcon">
 					<img
@@ -36,6 +56,7 @@ export default function Home(props) {
 					<div className="NameFolder">Readme</div>
 				</div>
 			</Draggable>
+
 			<Draggable nodeRef={dragRef} enableUserSelectHack={false}>
 				<div
 					ref={dragRef}
@@ -88,6 +109,9 @@ export default function Home(props) {
 					setEducation={setEducation}
 				/>
 			)}
+
+			{showLinkedin && <Feedbacks setShowLinkedin={setShowLinkedin} />}
+
 			{showAbout && <FolderPdf setSHowAbout={setSHowAbout} />}
 			{showWorksPdf && <WorksPdf setWorksPdf={setWorksPdf} />}
 			{showEducation && <EducationPdf setEducation={setEducation} />}
