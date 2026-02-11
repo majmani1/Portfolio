@@ -35,30 +35,37 @@ export default function EducationPdf(props) {
 			document.querySelector(".education").style.right = "5%";
 		}
 	}
+
 	return (
 		<Draggable nodeRef={dragRef} cancel=".interactive">
 			<div className="Pdf education" ref={dragRef}>
 				<div className="readmeTitle  ">
 					<div className="NameIcon">
-						<img src={Pdf} className="IconFolderRedme"></img>
+						<img src={Pdf} className="IconFolderRedme" alt="" />
 						Education
 					</div>
+
 					<div className="closeIcons">
-						<img src={Hide} className="closeIcon disable"></img>
+						<img src={Hide} className="closeIcon disable" alt="" />
+
 						<img
 							src={Big}
 							onClick={big_or_small}
 							onTouchEnd={big_or_small}
 							className="closeIcon "
-						></img>
+							alt="Resize window"
+						/>
+
 						<img
 							src={Close}
 							onClick={() => props.setEducation(false)}
 							onTouchEnd={() => props.setEducation(false)}
 							className="closeIcon"
-						></img>
+							alt="Close window"
+						/>
 					</div>
 				</div>
+
 				<div className="menuTextReadme interactive">
 					<ul>
 						<li>File</li>
@@ -72,7 +79,11 @@ export default function EducationPdf(props) {
 
 				<div className="SpaceText interactive">
 					<div className="MyWorks">
-						<img src={School13} className="MyWorksImg"></img>
+						<img
+							src={School13}
+							className="MyWorksImg"
+							alt="1337 Coding School"
+						/>
 						<div className="DescriptionProject">
 							<p>
 								•{" "}
@@ -80,7 +91,7 @@ export default function EducationPdf(props) {
 									École de Codage 1337, Université Polytechnique Mohammed VI
 								</strong>
 								<br></br>
-							<i>Software Developer</i>
+								<i>Software Developer</i>
 							</p>{" "}
 							<p>
 								• <strong>Cours pertinents :</strong> Développement Web,
@@ -90,6 +101,7 @@ export default function EducationPdf(props) {
 							</p>
 							<a
 								target="_blank"
+								rel="noreferrer"
 								href="https://www.1337.ma/"
 								className="LinkProject"
 							>
@@ -97,8 +109,13 @@ export default function EducationPdf(props) {
 							</a>
 						</div>
 					</div>
+
 					<div className="MyWorks">
-						<img src={Flsh} className="MyWorksImg"></img>
+						<img
+							src={Flsh}
+							className="MyWorksImg"
+							alt="Faculty of Letters and Human Sciences"
+						/>
 						<div className="DescriptionProject">
 							<p>
 								• <strong>FACULTY OF LETTERS AND HUMAN SCIENCES</strong>
@@ -110,6 +127,7 @@ export default function EducationPdf(props) {
 							</p>
 							<a
 								target="_blank"
+								rel="noreferrer"
 								href="http://www.um5.ac.ma/um5/faculte-des-lettres-et-des-sciences-humaines-de-rabat"
 								className="LinkProject"
 							>
@@ -117,8 +135,9 @@ export default function EducationPdf(props) {
 							</a>
 						</div>
 					</div>
+
 					<div className="MyWorks">
-						<img src={Ofppt} className="MyWorksImg"></img>
+						<img src={Ofppt} className="MyWorksImg" alt="OFPPT" />
 						<div className="DescriptionProject">
 							<p>
 								• <strong>Ista Ntic, OFPPT</strong>
@@ -130,6 +149,7 @@ export default function EducationPdf(props) {
 							</p>
 							<a
 								target="_blank"
+								rel="noreferrer"
 								href="https://www.nticrabat.com/"
 								className="LinkProject"
 							>

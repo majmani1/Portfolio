@@ -38,25 +38,28 @@ export default function Readme(props) {
 			<div className="readme" ref={dragRef}>
 				<div className="readmeTitle ">
 					<div className="NameIcon">
-						<img src={IconFloder} className="IconFolderRedme"></img>
+						<img src={IconFloder} className="IconFolderRedme" alt="" />
 						Readme
 					</div>
 					<div className="closeIcons ">
-						<img src={Hide} className="closeIcon disable"></img>
+						<img src={Hide} className="closeIcon disable" alt="" />
 						<img
 							src={Big}
 							className="closeIcon "
 							onClick={big_or_small}
 							onTouchEnd={big_or_small}
-						></img>
+							alt="Resize window"
+						/>
 						<img
 							src={Close}
 							onClick={() => props.setShowReadme(false)}
 							onTouchEnd={() => props.setShowReadme(false)}
 							className="closeIcon"
-						></img>
+							alt="Close window"
+						/>
 					</div>
 				</div>
+
 				<div className="menuTextReadme interactive">
 					<ul>
 						<li>File</li>
@@ -67,19 +70,21 @@ export default function Readme(props) {
 						<li>Help</li>
 					</ul>
 				</div>
+
 				<div className="menuIconReadme interactive">
-					<img src={BackIcon} className="backIcon"></img>
+					<img src={BackIcon} className="backIcon" alt="" />
 					Back &#9660;
-					<img src={BackIcon} className="backIcon otherSide"></img>
+					<img src={BackIcon} className="backIcon otherSide" alt="" />
 					&#9660;
-					<img src={ShareFolderIcon} className="backIcon"></img>
-					<img src={ZoomIcon} className="backIcon"></img>
+					<img src={ShareFolderIcon} className="backIcon" alt="" />
+					<img src={ZoomIcon} className="backIcon" alt="" />
 					Search
-					<img src={IconFloder} className="backIcon"></img>
+					<img src={IconFloder} className="backIcon" alt="" />
 					Folders
-					<img src={TableIcon} className="backIcon"></img>
+					<img src={TableIcon} className="backIcon" alt="" />
 					&#9660;
 				</div>
+
 				<div className="readmeSearch interactive">
 					Address
 					<div className="divInput">
@@ -91,9 +96,10 @@ export default function Readme(props) {
 							disabled
 						/>
 					</div>
-					<img src={BackIcon} className="backIconInput"></img>
+					<img src={BackIcon} className="backIconInput" alt="" />
 					GO
 				</div>
+
 				<div className="contentReadme interactive">
 					<div className="sideBarReadme">
 						<div className="tasks">
@@ -113,37 +119,42 @@ export default function Readme(props) {
 
 						<div className="HeaderTasks Details">File and Folder Tasks</div>
 					</div>
+
 					<div className="filesReadme">
 						<div
 							className="folderIcon"
 							onDoubleClick={() => props.setSHowAbout(true)}
 							onTouchEnd={() => props.setSHowAbout(true)}
 						>
-							<img src={Pdf} className="IconFolder"></img>
+							<img src={Pdf} className="IconFolder" alt="" />
 							<div className="NameFolder NameFolderReadme">About me</div>
 						</div>
+
 						<div
 							className="folderIcon"
 							onDoubleClick={() => props.setWorksPdf(true)}
 							onTouchEnd={() => props.setWorksPdf(true)}
 						>
-							<img src={Pdf} className="IconFolder"></img>
+							<img src={Pdf} className="IconFolder" alt="" />
 							<div className="NameFolder NameFolderReadme">My Works</div>
 						</div>
+
 						<div
 							className="folderIcon"
 							onDoubleClick={() => props.setEducation(true)}
 							onTouchEnd={() => props.setEducation(true)}
 						>
-							<img src={Pdf} className="IconFolder"></img>
+							<img src={Pdf} className="IconFolder" alt="" />
 							<div className="NameFolder NameFolderReadme"> Education</div>
 						</div>
+
 						{/* <div className="folderIcon">
-							<img src={Pdf} className="IconFolder"></img>
+							<img src={Pdf} className="IconFolder" alt="" />
 							<div className="NameFolder NameFolderReadme">Contact me</div>
 						</div> */}
 					</div>
 				</div>
+
 				{/* <div className="readmeContent"></div> */}
 			</div>
 		</Draggable>

@@ -14,11 +14,9 @@ import Ofppt from "../assets/images/Programming_Languages/ofppt.png";
 import ReactLogo from "../assets/images/Programming_Languages/react.png";
 import Log from "../assets/images/iconsWindowsXP/log.ico";
 import TurnOff from "../assets/images/iconsWindowsXP/turnOff.ico";
-import Restart from "../assets/images/Windows-Restart-icon.png";
-import { useState } from "react";
 
-import SocialMedia from "./socialMedia";
 import Skills from "./skills";
+
 export default function LeftSide(props) {
 	return (
 		<div className="fullLeftSIde">
@@ -26,6 +24,7 @@ export default function LeftSide(props) {
 				<div className="pictureMouad"></div>
 				<div className="nameMouad">Mouad Ajmani</div>
 			</div>
+
 			<div className="left_side">
 				<Skills picture={css} title="Cascading Style Sheets" />
 				<Skills picture={html} title="Hypertext Markup Language" />
@@ -39,6 +38,7 @@ export default function LeftSide(props) {
 				<Skills picture={illustrator} title="illustrator" />
 				<Skills picture={docker} title="Docker" />
 			</div>
+
 			<div className="right_side">
 				<Skills
 					picture={Ofppt}
@@ -48,6 +48,7 @@ export default function LeftSide(props) {
 				<Skills picture={Meta} title="Introduction to Front-End Development" />
 				<Skills picture={Meta} title="Programming with JavaScript" />
 			</div>
+
 			<div className="footerLeftSide">
 				<div className="turnLog" onClick={() => props.setShowPages("log")}>
 					<div
@@ -56,7 +57,8 @@ export default function LeftSide(props) {
 					></div>
 					Log Off
 				</div>
-				<div className="turnLog " onClick={() => props.setShowPages("loading")}>
+
+				<div className="turnLog" onClick={() => props.setShowPages("loading")}>
 					<div
 						className="logoLogs"
 						style={{ backgroundImage: `url(${TurnOff})` }}

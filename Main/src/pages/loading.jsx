@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/loading.css";
 import logo_windowsXp from "../assets/images/logo_windowsXp.png";
-// import Home from "./home";
 import LogPage from "./LogPage";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -18,28 +17,31 @@ export default function Loading_windowsXp() {
 			progress: undefined,
 			theme: "light",
 		});
+
 	const [showHome, setShowHome] = useState(false);
 	const isDesktop = () => window.innerWidth >= 1024;
 
 	useEffect(() => {
-		if (showHome == false) {
+		if (showHome === false) {
 			const timer = setTimeout(() => {
 				setShowHome(true);
 			}, 5000);
 
 			return () => clearTimeout(timer);
 		}
-	}, []);
+	}, [showHome]);   // ✅ FIXED
+
 	useEffect(() => {
 		if (!showHome && isDesktop()) {
 			notify();
 		}
 	}, [showHome]);
+
 	return (
 		<>
 			<ToastContainer />
 			{showHome ? (
-				<LogPage /> //setShowHome={setShowHome}
+				<LogPage />
 			) : (
 				<div className="fullLoading">
 					<div className="logo_with_loading">

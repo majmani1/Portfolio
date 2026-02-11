@@ -1,6 +1,5 @@
 import "../styles/logPage.css";
 import { useState } from "react";
-import Home from "../pages/home";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

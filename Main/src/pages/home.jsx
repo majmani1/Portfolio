@@ -10,8 +10,8 @@ import Readme from "../components/readme";
 import FolderPdf from "../components/folderPdf";
 import WorksPdf from "../components/pdfWorks";
 import EducationPdf from "../components/educationPdf";
-import Cv_fr from "../components/cvPdf";
-import Cv_an from "../components/cvPdfAn";
+import CvFr from "../components/cvPdf";
+import CvAn from "../components/cvPdfAn";
 import Draggable from "react-draggable";
 import Feedbacks from "../components/feedbacks";
 
@@ -32,8 +32,6 @@ export default function Home(props) {
 	return (
 		//onContextMenu={handleRightClick}
 		<div className="fullHome">
-			
-
 			<Draggable nodeRef={dragRef} enableUserSelectHack={false}>
 				<div ref={dragRef} className="folderIcon FeedbackPortfolio">
 					<img
@@ -41,10 +39,12 @@ export default function Home(props) {
 						className="IconFolder"
 						onDoubleClick={() => setShowLinkedin(true)}
 						onTouchEnd={() => setShowLinkedin(true)}
+						alt=""
 					></img>
 					<div className="NameFolder">Feedback For Portfolio</div>
 				</div>
 			</Draggable>
+
 			<Draggable nodeRef={dragRef} enableUserSelectHack={false}>
 				<div ref={dragRef} className="folderIcon">
 					<img
@@ -52,6 +52,7 @@ export default function Home(props) {
 						className="IconFolder"
 						onDoubleClick={() => setShowReadme(true)}
 						onTouchEnd={() => setShowReadme(true)}
+						alt=""
 					></img>
 					<div className="NameFolder">Readme</div>
 				</div>
@@ -69,6 +70,7 @@ export default function Home(props) {
 						className="IconFolder"
 						onDoubleClick={() => setShowCV_fr(true)}
 						onTouchEnd={() => setShowCV_fr(true)}
+						alt=""
 					></img>
 					<div
 						className="NameFolder"
@@ -79,6 +81,7 @@ export default function Home(props) {
 					</div>
 				</div>
 			</Draggable>
+
 			<Draggable nodeRef={dragRef}>
 				<div
 					ref={dragRef}
@@ -91,6 +94,7 @@ export default function Home(props) {
 						className="IconFolder"
 						onDoubleClick={() => setShowCV_an(true)}
 						onTouchEnd={() => setShowCV_an(true)}
+						alt=""
 					></img>
 					<div
 						className="NameFolder"
@@ -101,6 +105,7 @@ export default function Home(props) {
 					</div>
 				</div>
 			</Draggable>
+
 			{showReadme && (
 				<Readme
 					setShowReadme={setShowReadme}
@@ -115,9 +120,10 @@ export default function Home(props) {
 			{showAbout && <FolderPdf setSHowAbout={setSHowAbout} />}
 			{showWorksPdf && <WorksPdf setWorksPdf={setWorksPdf} />}
 			{showEducation && <EducationPdf setEducation={setEducation} />}
-			{showCv_fr && <Cv_fr setShowCV_fr={setShowCV_fr}></Cv_fr>}
 
-			{showCv_an && <Cv_an setShowCV_an={setShowCV_an} />}
+			{showCv_fr && <CvFr setShowCV_fr={setShowCV_fr}></CvFr>}
+			{showCv_an && <CvAn setShowCV_an={setShowCV_an} />}
+
 			<FooterHome setShowPages={props.setShowPages} />
 		</div>
 	);

@@ -34,30 +34,37 @@ export default function Cvpdf(props) {
 			document.querySelector(".about").style.left = "2%";
 		}
 	}
+
 	return (
 		<Draggable nodeRef={dragRef} cancel=".interactive">
 			<div className="Pdf about" ref={dragRef}>
 				<div className="readmeTitle">
 					<div className="NameIcon">
-						<img src={Pdf} className="IconFolderRedme"></img>
+						<img src={Pdf} className="IconFolderRedme" alt="" />
 						Cv_Mouad_Ajmani (fr)
 					</div>
+
 					<div className="closeIcons">
-						<img src={Hide} className="closeIcon disable"></img>
+						<img src={Hide} className="closeIcon disable" alt="" />
+
 						<img
 							src={Big}
 							onClick={big_or_small}
 							onTouchEnd={big_or_small}
 							className="closeIcon "
-						></img>
+							alt="Agrandir / réduire la fenêtre"
+						/>
+
 						<img
 							src={Close}
 							onClick={() => props.setShowCV_fr(false)}
 							onTouchEnd={() => props.setShowCV_fr(false)}
 							className="closeIcon"
-						></img>
+							alt="Fermer la fenêtre"
+						/>
 					</div>
 				</div>
+
 				<div className="menuTextReadme interactive">
 					<ul>
 						<li>File</li>
@@ -77,6 +84,7 @@ export default function Cvpdf(props) {
 					{" "}
 					Télécharger
 				</a>
+
 				<div className="  cvs interactive">
 					<div className="infosPerso">
 						<span className="Name">Mouad Ajmani</span>
@@ -91,9 +99,11 @@ export default function Cvpdf(props) {
 							<span>RABAT-MORROCO</span>
 						</div>
 					</div>
+
 					<div className="titleCv">
 						<i>Projets</i>
 					</div>
+
 					<div className="discription">
 						<strong>FT_TRANSCENDENCE</strong>
 						<p>
@@ -108,6 +118,7 @@ export default function Cvpdf(props) {
 							pour activer les interactions en temps réel, améliorant ainsi
 							l'expérience utilisateur.
 						</p>
+
 						<strong>Serveur Web HTTP</strong>
 						<p>
 							• Contribution au développement d'un serveur web personnalisé,
@@ -119,6 +130,7 @@ export default function Cvpdf(props) {
 							améliorer l'efficacité du serveur et gérer les requêtes clients
 							simultanément.
 						</p>
+
 						<strong>INCEPTION</strong>
 						<p>
 							• Projet axé sur l'approfondissement de mes compétences en Docker
@@ -131,9 +143,11 @@ export default function Cvpdf(props) {
 							globale du déploiement de services dans un environnement Docker.
 						</p>
 					</div>
+
 					<div className="titleCv">
 						<i>FORMATION</i>
 					</div>
+
 					<div className="Education">
 						<strong>Développeur Logiciel</strong>
 						<i>École de Codage 1337, Université Polytechnique Mohammed VI</i>
@@ -158,20 +172,22 @@ export default function Cvpdf(props) {
 							Web, Graphisme, Design, UX/UI, Structures de Données.
 						</p>
 					</div>
+
 					<div className="titleCv">
 						<i>COMPÉTENCES</i>
 					</div>
 
 					<div className="Education">
 						<p>
-							• <strong>Compétences Techniques :</strong> HTML,
-							CSS,JavaScript,React, Django, C, C++, SQL, UX/UI,Figma, Docker,
-							Adobe Photoshop, Adobe Illustrator
+							• <strong>Compétences Techniques :</strong> HTML, CSS,JavaScript,React,
+							Django, C, C++, SQL, UX/UI,Figma, Docker, Adobe Photoshop, Adobe Illustrator
 						</p>
 					</div>
+
 					<div className="titleCv">
 						<i>CERTIFICATS</i>
 					</div>
+
 					<ul>
 						<li>FORMATION QUALIFIANTE EN LANGUAGE PYTHON. (ISTA)</li>
 						<li>Programming with JavaScript (Meta)</li>

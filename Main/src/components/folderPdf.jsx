@@ -15,12 +15,7 @@ export default function FolderPdf(props) {
 			setBigWindow(false);
 			document.querySelector(".Pdf").style.width = "100vw";
 			document.querySelector(".Pdf").style.height = "96vh";
-			// document.querySelector(".Pdf").style.border = "0px";
 			document.querySelector(".Pdf").style.zIndex = "1";
-			// document.querySelector(".about").style.top = "-2%";
-			// document.querySelector(".about").style.left = "0%";
-			// document.querySelector(".about").style.right = "0";
-			// document.querySelector(".about").style.buttom = "0%";
 		} else {
 			setBigWindow(true);
 			document.querySelector(".Pdf").style.width = "50vw";
@@ -28,34 +23,40 @@ export default function FolderPdf(props) {
 			document.querySelector(".about").style.top = "0";
 			document.querySelector(".Pdf").style.border = " 6px solid #0a25c0";
 			document.querySelector(".Pdf").style.zIndex = "1";
-			document.querySelector(".Pdf").style.border = " 6px solid #0a25c0";
 			document.querySelector(".about").style.left = "2%";
 		}
 	}
+
 	return (
 		<Draggable nodeRef={dragRef} cancel=".interactive">
 			<div className="Pdf about" ref={dragRef}>
 				<div className="readmeTitle">
 					<div className="NameIcon">
-						<img src={Pdf} className="IconFolderRedme"></img>
+						<img src={Pdf} className="IconFolderRedme" alt="" />
 						About
 					</div>
+
 					<div className="closeIcons">
-						<img src={Hide} className="closeIcon disable"></img>
+						<img src={Hide} className="closeIcon disable" alt="" />
+
 						<img
 							src={Big}
 							onClick={big_or_small}
 							onTouchEnd={big_or_small}
 							className="closeIcon "
-						></img>
+							alt="Resize window"
+						/>
+
 						<img
 							src={Close}
 							onClick={() => props.setSHowAbout(false)}
 							onTouchEnd={() => props.setSHowAbout(false)}
 							className="closeIcon"
-						></img>
+							alt="Close window"
+						/>
 					</div>
 				</div>
+
 				<div className="menuTextReadme interactive">
 					<ul>
 						<li>File</li>
@@ -89,8 +90,6 @@ export default function FolderPdf(props) {
 						in order to gain more knowledge as well as to gain experience
 					</p>
 				</div>
-
-				{/* <div className="readmeContent"></div> */}
 			</div>
 		</Draggable>
 	);
